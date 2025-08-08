@@ -11,7 +11,6 @@ router.get('/', async (req, res) => {
     const result = await pool.query('SELECT * from rides');
     res.send(`Backend and DB connected: ${result.rows[0].now}`);
   } catch (err) {
-    res.send(err);
     res.status(500).send('Database connection failed');
   }
 });
