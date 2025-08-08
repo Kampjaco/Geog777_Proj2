@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const PORT = process.env.PORT || 8080;
 
-///Middleware
+//Middleware
 app.use(express.json());
 app.use('/', routes);
 
