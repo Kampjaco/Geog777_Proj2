@@ -9,8 +9,11 @@ const pool = require('../db/connection');
 router.get('/', async (req, res) => {
   try {
     const result = await pool.query('SELECT * from rides');
+    console.log(result)
     res.send(`Backend and DB connected: ${result.rows[0].now}`);
   } catch (err) {
+    console.log(result);
+    console.log(err);
     res.status(500).send('Database connection failed');
   }
 });
