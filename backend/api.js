@@ -4,7 +4,7 @@ const routes = require('./routes/index');
 const pool = require('./db/connection')
 require('dotenv').config();
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT;
 
 ///Middleware
 app.use(express.json());
