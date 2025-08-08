@@ -12,7 +12,6 @@ router.get('/', async (req, res) => {
     console.log(result)
     res.send(`Backend and DB connected: ${result.rows[0].now}`);
   } catch (err) {
-    console.log(result);
     console.log(err);
     res.status(500).send('Database connection failed');
   }
