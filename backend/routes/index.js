@@ -4,7 +4,7 @@ const pool = require('../db/connection');
 
 // router.get('/', (req, res) => {
 //   res.send('Backend is working!');
-// });
+/// });
 
 router.get('/', async (req, res) => {
   try {
