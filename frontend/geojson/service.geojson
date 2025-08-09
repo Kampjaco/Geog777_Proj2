@@ -1,0 +1,38 @@
+{
+  "displayFieldName" : "",
+  "fieldAliases" : {
+    "OBJECTID" : "OBJECTID",
+    "SL_ID" : "Service Location ID",
+    "TYPE" : "Service Type",
+    "SECTION" : "Section ID"
+  },
+  "geometryType" : "esriGeometryPoint",
+  "spatialReference" : {
+    "wkid" : 102100,
+    "latestWkid" : 3857
+  },
+  "fields" : [
+    {
+      "name" : "OBJECTID",
+      "type" : "esriFieldTypeOID",
+      "alias" : "OBJECTID"
+    },
+    {
+      "name" : "SL_ID",
+      "type" : "esriFieldTypeInteger",
+      "alias" : "Service Location ID"
+    },
+    {
+      "name" : "TYPE",
+      "type" : "esriFieldTypeString",
+      "alias" : "Service Type",
+      "length" : 150
+    },
+    {
+      "name" : "SECTION",
+      "type" : "esriFieldTypeSmallInteger",
+      "alias" : "Section ID"
+    }
+  ],
+  "features" : [{"attributes":{"OBJECTID":2,"SL_ID":400001,"TYPE":"1","SECTION":5},"geometry":{"x":-10402941.3739,"y":5589642.3264999986}},{"attributes":{"OBJECTID":3,"SL_ID":400002,"TYPE":"11","SECTION":5},"geometry":{"x":-10402936.171,"y":5589661.4037000015}},{"attributes":{"OBJECTID":4,"SL_ID":400003,"TYPE":"12","SECTION":4},"geometry":{"x":-10403186.167300001,"y":5589858.2151999995}},{"attributes":{"OBJECTID":5,"SL_ID":400004,"TYPE":"5","SECTION":4},"geometry":{"x":-10403187.582599999,"y":5589929.0417999998}},{"attributes":{"OBJECTID":6,"SL_ID":400005,"TYPE":"2","SECTION":4},"geometry":{"x":-10403213.4374,"y":5589926.6696000025}},{"attributes":{"OBJECTID":7,"SL_ID":400006,"TYPE":"4","SECTION":4},"geometry":{"x":-10403230.6009,"y":5589925.932099998}},{"attributes":{"OBJECTID":8,"SL_ID":400007,"TYPE":"3","SECTION":4},"geometry":{"x":-10403247.0068,"y":5589911.5593999997}},{"attributes":{"OBJECTID":9,"SL_ID":400008,"TYPE":"5","SECTION":4},"geometry":{"x":-10403256.9541,"y":5589894.9540999979}},{"attributes":{"OBJECTID":10,"SL_ID":400009,"TYPE":"5","SECTION":4},"geometry":{"x":-10403247.345699999,"y":5589874.9002000019}},{"attributes":{"OBJECTID":11,"SL_ID":400010,"TYPE":"1","SECTION":4},"geometry":{"x":-10403222.108899999,"y":5589874.1427000016}},{"attributes":{"OBJECTID":12,"SL_ID":400011,"TYPE":"11","SECTION":5},"geometry":{"x":-10403228.8068,"y":5589857.3580000028}},{"attributes":{"OBJECTID":13,"SL_ID":400012,"TYPE":"6","SECTION":4},"geometry":{"x":-10403261.6522,"y":5589924.7885999978}},{"attributes":{"OBJECTID":14,"SL_ID":400013,"TYPE":"1","SECTION":8},"geometry":{"x":-10403317.1943,"y":5590087.4112000018}},{"attributes":{"OBJECTID":15,"SL_ID":400014,"TYPE":"11","SECTION":8},"geometry":{"x":-10403311.4321,"y":5590103.1406999975}},{"attributes":{"OBJECTID":16,"SL_ID":400015,"TYPE":"11","SECTION":8},"geometry":{"x":-10403531.649499999,"y":5590157.492899999}},{"attributes":{"OBJECTID":17,"SL_ID":400016,"TYPE":"8","SECTION":8},"geometry":{"x":-10403548.8125,"y":5590161.7876999974}},{"attributes":{"OBJECTID":18,"SL_ID":400017,"TYPE":"7","SECTION":8},"geometry":{"x":-10403553.1073,"y":5590143.5631999969}},{"attributes":{"OBJECTID":19,"SL_ID":400018,"TYPE":"10","SECTION":7},"geometry":{"x":-10403767.9902,"y":5590075.3197999969}},{"attributes":{"OBJECTID":20,"SL_ID":400019,"TYPE":"11","SECTION":7},"geometry":{"x":-10403761.1527,"y":5590093.4799999967}},{"attributes":{"OBJECTID":21,"SL_ID":400020,"TYPE":"6","SECTION":2},"geometry":{"x":-10403879.431,"y":5589968.2805000022}},{"attributes":{"OBJECTID":22,"SL_ID":400021,"TYPE":"1","SECTION":2},"geometry":{"x":-10403896.807399999,"y":5589974.2256999984}},{"attributes":{"OBJECTID":23,"SL_ID":400022,"TYPE":"11","SECTION":2},"geometry":{"x":-10403913.418199999,"y":5589979.6605999991}},{"attributes":{"OBJECTID":24,"SL_ID":400023,"TYPE":"6","SECTION":2},"geometry":{"x":-10403930.195,"y":5589983.9345000014}},{"attributes":{"OBJECTID":25,"SL_ID":400024,"TYPE":"10","SECTION":2},"geometry":{"x":-10403909.0167,"y":5589995.7995000035}},{"attributes":{"OBJECTID":26,"SL_ID":400025,"TYPE":"5","SECTION":7},"geometry":{"x":-10403894.766100001,"y":5590131.5314000025}},{"attributes":{"OBJECTID":27,"SL_ID":400026,"TYPE":"1","SECTION":7},"geometry":{"x":-10403921.3792,"y":5590144.5190000013}},{"attributes":{"OBJECTID":28,"SL_ID":400027,"TYPE":"6","SECTION":7},"geometry":{"x":-10403937.9901,"y":5590148.2954000011}},{"attributes":{"OBJECTID":29,"SL_ID":400028,"TYPE":"11","SECTION":7},"geometry":{"x":-10403935.1195,"y":5590167.1133999974}},{"attributes":{"OBJECTID":30,"SL_ID":400029,"TYPE":"1","SECTION":2},"geometry":{"x":-10404071.7828,"y":5589956.8110999987}},{"attributes":{"OBJECTID":31,"SL_ID":400030,"TYPE":"11","SECTION":2},"geometry":{"x":-10404065.4421,"y":5589976.1904999986}},{"attributes":{"OBJECTID":32,"SL_ID":400031,"TYPE":"6","SECTION":2},"geometry":{"x":-10404049.2905,"y":5589959.1203000024}},{"attributes":{"OBJECTID":33,"SL_ID":400032,"TYPE":"11","SECTION":6},"geometry":{"x":-10403727.423900001,"y":5589978.7380999997}},{"attributes":{"OBJECTID":34,"SL_ID":400033,"TYPE":"1","SECTION":6},"geometry":{"x":-10403708.267000001,"y":5589972.0998999998}},{"attributes":{"OBJECTID":35,"SL_ID":400034,"TYPE":"9","SECTION":6},"geometry":{"x":-10403650.6369,"y":5589983.0040000007}},{"attributes":{"OBJECTID":36,"SL_ID":400035,"TYPE":"5","SECTION":6},"geometry":{"x":-10403468.803200001,"y":5589831.4130999967}},{"attributes":{"OBJECTID":37,"SL_ID":400036,"TYPE":"11","SECTION":6},"geometry":{"x":-10403483.104900001,"y":5589840.8923000023}},{"attributes":{"OBJECTID":38,"SL_ID":400037,"TYPE":"1","SECTION":6},"geometry":{"x":-10403477.963400001,"y":5589858.6385999992}},{"attributes":{"OBJECTID":39,"SL_ID":400038,"TYPE":"5","SECTION":6},"geometry":{"x":-10403385.5703,"y":5589854.4077000022}}]
+}
