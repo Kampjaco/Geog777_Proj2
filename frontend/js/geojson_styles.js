@@ -6,19 +6,11 @@
  */
 
 function sidewalkStyle(feature) {
-    if(feature.properties.name == 'Valleyfair') {
-        return {
-            fillColor: '#B2B2B2',
-            fillOpacity: 1,
-            color: '#6E6E6E',
-            weight: 0.7
-        }
-    }
     return {
-            fillColor: '#B2B2B2',
-            fillOpacity: 1,
-            color: '#6E6E6E',
-            weight: 1
+        fillColor: '#B2B2B2',
+        fillOpacity: 1,
+        color: '#6E6E6E',
+        weight: 1.25
     }
 }
 
