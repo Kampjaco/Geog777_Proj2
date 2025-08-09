@@ -1,45 +1,373 @@
 {
-  "displayFieldName" : "",
-  "fieldAliases" : {
-    "OBJECTID" : "OBJECTID",
-    "RGL_ID" : "R&G Location ID",
-    "NAME" : "Location Name",
-    "SELLS_FASTLANE" : "Sells Fastlane?",
-    "SECTION" : "Section ID"
-  },
-  "geometryType" : "esriGeometryPoint",
-  "spatialReference" : {
-    "wkid" : 102100,
-    "latestWkid" : 3857
-  },
-  "fields" : [
+  "type": "FeatureCollection",
+  "features": [
     {
-      "name" : "OBJECTID",
-      "type" : "esriFieldTypeOID",
-      "alias" : "OBJECTID"
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.45357987,
+          44.798566914
+        ]
+      },
+      "properties": {
+        "name": "Photo Memories",
+        "rgl_id": 300001,
+        "section": "Front Gate",
+        "sells_fastlane": "No"
+      }
     },
     {
-      "name" : "RGL_ID",
-      "type" : "esriFieldTypeInteger",
-      "alias" : "R&G Location ID"
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.4541842,
+          44.798780849
+        ]
+      },
+      "properties": {
+        "name": "Plaza Shopper",
+        "rgl_id": 300002,
+        "section": "Northern Section",
+        "sells_fastlane": "Yes"
+      }
     },
     {
-      "name" : "NAME",
-      "type" : "esriFieldTypeString",
-      "alias" : "Location Name",
-      "length" : 100
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.454191461,
+          44.798886004
+        ]
+      },
+      "properties": {
+        "name": "Sweet!",
+        "rgl_id": 300003,
+        "section": "Northern Section",
+        "sells_fastlane": "Yes"
+      }
     },
     {
-      "name" : "SELLS_FASTLANE",
-      "type" : "esriFieldTypeString",
-      "alias" : "Sells Fastlane?",
-      "length" : 3
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.454231803,
+          44.799004326
+        ]
+      },
+      "properties": {
+        "name": "Attitudes",
+        "rgl_id": 300004,
+        "section": "Northern Section",
+        "sells_fastlane": "No"
+      }
     },
     {
-      "name" : "SECTION",
-      "type" : "esriFieldTypeSmallInteger",
-      "alias" : "Section ID"
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.454305065,
+          44.79833836
+        ]
+      },
+      "properties": {
+        "name": "Body Art",
+        "rgl_id": 300005,
+        "section": "Southern Section",
+        "sells_fastlane": "No"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.455356766,
+          44.798274847
+        ]
+      },
+      "properties": {
+        "name": "Games Area (Midway)",
+        "rgl_id": 300006,
+        "section": "Southern Section",
+        "sells_fastlane": "No"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.456036456,
+          44.798658901
+        ]
+      },
+      "properties": {
+        "name": "Northern Lights Novelties",
+        "rgl_id": 300007,
+        "section": "Southern Section",
+        "sells_fastlane": "Yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.456184109,
+          44.798919783
+        ]
+      },
+      "properties": {
+        "name": "Caricatures",
+        "rgl_id": 300008,
+        "section": "Southern Section",
+        "sells_fastlane": "No"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.456289269,
+          44.800176084
+        ]
+      },
+      "properties": {
+        "name": "SNOOPY Boutique",
+        "rgl_id": 300009,
+        "section": "Northern Section",
+        "sells_fastlane": "Yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.456673597,
+          44.798994211
+        ]
+      },
+      "properties": {
+        "name": "Basketball Game",
+        "rgl_id": 300010,
+        "section": "Southern Section",
+        "sells_fastlane": "No"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.457352587,
+          44.798671191
+        ]
+      },
+      "properties": {
+        "name": "Hi-Test Arcade",
+        "rgl_id": 300011,
+        "section": "Southern Section",
+        "sells_fastlane": "No"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.4587766,
+          44.798782216
+        ]
+      },
+      "properties": {
+        "name": "Wild Thing Ride Photos",
+        "rgl_id": 300012,
+        "section": "Southern Section",
+        "sells_fastlane": "No"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.458828411,
+          44.799594804
+        ]
+      },
+      "properties": {
+        "name": "Airbrush",
+        "rgl_id": 300013,
+        "section": "Western Section",
+        "sells_fastlane": "No"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.4587766,
+          44.799734896
+        ]
+      },
+      "properties": {
+        "name": "Games Area (Mad Mouse)",
+        "rgl_id": 300014,
+        "section": "Western Section",
+        "sells_fastlane": "No"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.459617961,
+          44.800335076
+        ]
+      },
+      "properties": {
+        "name": "Antique Photo Shop",
+        "rgl_id": 300015,
+        "section": "Western Section",
+        "sells_fastlane": "No"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.46029012,
+          44.800274618
+        ]
+      },
+      "properties": {
+        "name": "The General Store",
+        "rgl_id": 300016,
+        "section": "Western Section",
+        "sells_fastlane": "Yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.460904664,
+          44.800430322
+        ]
+      },
+      "properties": {
+        "name": "Outpost: Renegade Photos",
+        "rgl_id": 300017,
+        "section": "Western Section",
+        "sells_fastlane": "No"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.460302169,
+          44.799317062
+        ]
+      },
+      "properties": {
+        "name": "Dockside Supplies",
+        "rgl_id": 300018,
+        "section": "Soak City",
+        "sells_fastlane": "No"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.459444456,
+          44.799341612
+        ]
+      },
+      "properties": {
+        "name": "Cabana Rental",
+        "rgl_id": 300019,
+        "section": "Soak City",
+        "sells_fastlane": "No"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.458656972,
+          44.799612147
+        ]
+      },
+      "properties": {
+        "name": "Body Art",
+        "rgl_id": 300020,
+        "section": "Western Section",
+        "sells_fastlane": "No"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.457855631,
+          44.798945547
+        ]
+      },
+      "properties": {
+        "name": "Caricatures",
+        "rgl_id": 300021,
+        "section": "Southern Section",
+        "sells_fastlane": "No"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.457672476,
+          44.799124365
+        ]
+      },
+      "properties": {
+        "name": "Basketball Game",
+        "rgl_id": 300022,
+        "section": "Southern Section",
+        "sells_fastlane": "No"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.458134286,
+          44.799782638
+        ]
+      },
+      "properties": {
+        "name": "Basketball Game",
+        "rgl_id": 300023,
+        "section": "Western Section",
+        "sells_fastlane": "No"
+      }
     }
-  ],
-  "features" : [{"attributes":{"OBJECTID":2,"RGL_ID":300001,"NAME":"Photo Memories","SELLS_FASTLANE":"0","SECTION":4},"geometry":{"x":-10403204.923900001,"y":5589865.5177000016}},{"attributes":{"OBJECTID":3,"RGL_ID":300002,"NAME":"Plaza Shopper","SELLS_FASTLANE":"1","SECTION":8},"geometry":{"x":-10403272.1976,"y":5589899.0797000006}},{"attributes":{"OBJECTID":4,"RGL_ID":300003,"NAME":"Sweet!","SELLS_FASTLANE":"1","SECTION":8},"geometry":{"x":-10403273.005899999,"y":5589915.5763000026}},{"attributes":{"OBJECTID":5,"RGL_ID":300004,"NAME":"Attitudes","SELLS_FASTLANE":"0","SECTION":8},"geometry":{"x":-10403277.4968,"y":5589934.1387000009}},{"attributes":{"OBJECTID":6,"RGL_ID":300005,"NAME":"Body Art","SELLS_FASTLANE":"0","SECTION":6},"geometry":{"x":-10403285.6523,"y":5589829.6623999998}},{"attributes":{"OBJECTID":7,"RGL_ID":300006,"NAME":"Games Area (Midway)","SELLS_FASTLANE":"0","SECTION":6},"geometry":{"x":-10403402.7271,"y":5589819.6986000016}},{"attributes":{"OBJECTID":8,"RGL_ID":300007,"NAME":"Northern Lights Novelties","SELLS_FASTLANE":"1","SECTION":6},"geometry":{"x":-10403478.389799999,"y":5589879.9484999999}},{"attributes":{"OBJECTID":9,"RGL_ID":300008,"NAME":"Caricatures","SELLS_FASTLANE":"0","SECTION":6},"geometry":{"x":-10403494.8265,"y":5589920.8756000027}},{"attributes":{"OBJECTID":10,"RGL_ID":300009,"NAME":"SNOOPY Boutique","SELLS_FASTLANE":"1","SECTION":8},"geometry":{"x":-10403506.5328,"y":5590117.9662000015}},{"attributes":{"OBJECTID":11,"RGL_ID":300010,"NAME":"Basketball Game","SELLS_FASTLANE":"0","SECTION":6},"geometry":{"x":-10403549.316099999,"y":5589932.5518999994}},{"attributes":{"OBJECTID":12,"RGL_ID":300011,"NAME":"Hi-Test Arcade","SELLS_FASTLANE":"0","SECTION":6},"geometry":{"x":-10403624.900900001,"y":5589881.8765999973}},{"attributes":{"OBJECTID":13,"RGL_ID":300012,"NAME":"Wild Thing Ride Photos","SELLS_FASTLANE":"0","SECTION":6},"geometry":{"x":-10403783.4213,"y":5589899.2941000015}},{"attributes":{"OBJECTID":14,"RGL_ID":300013,"NAME":"Airbrush","SELLS_FASTLANE":"0","SECTION":7},"geometry":{"x":-10403789.1888,"y":5590026.7734000012}},{"attributes":{"OBJECTID":15,"RGL_ID":300014,"NAME":"Games Area (Mad Mouse)","SELLS_FASTLANE":"0","SECTION":7},"geometry":{"x":-10403783.4213,"y":5590048.7512999997}},{"attributes":{"OBJECTID":16,"RGL_ID":300015,"NAME":"Antique Photo Shop","SELLS_FASTLANE":"0","SECTION":7},"geometry":{"x":-10403877.0812,"y":5590142.9092999995}},{"attributes":{"OBJECTID":17,"RGL_ID":300016,"NAME":"The General Store","SELLS_FASTLANE":"1","SECTION":7},"geometry":{"x":-10403951.9055,"y":5590133.4245000035}},{"attributes":{"OBJECTID":18,"RGL_ID":300017,"NAME":"Outpost: Renegade Photos","SELLS_FASTLANE":"0","SECTION":7},"geometry":{"x":-10404020.316299999,"y":5590157.8518999964}},{"attributes":{"OBJECTID":19,"RGL_ID":300018,"NAME":"Dockside Supplies","SELLS_FASTLANE":"0","SECTION":2},"geometry":{"x":-10403953.2468,"y":5589983.2009000033}},{"attributes":{"OBJECTID":20,"RGL_ID":300019,"NAME":"Cabana Rental","SELLS_FASTLANE":"0","SECTION":2},"geometry":{"x":-10403857.7667,"y":5589987.0522999987}},{"attributes":{"OBJECTID":21,"RGL_ID":300020,"NAME":"Body Art","SELLS_FASTLANE":"0","SECTION":7},"geometry":{"x":-10403770.1043,"y":5590029.4943000004}},{"attributes":{"OBJECTID":22,"RGL_ID":300021,"NAME":"Caricatures","SELLS_FASTLANE":"0","SECTION":6},"geometry":{"x":-10403680.899499999,"y":5589924.9174000025}},{"attributes":{"OBJECTID":23,"RGL_ID":300022,"NAME":"Basketball Game","SELLS_FASTLANE":"0","SECTION":6},"geometry":{"x":-10403660.5108,"y":5589952.9704999998}},{"attributes":{"OBJECTID":24,"RGL_ID":300023,"NAME":"Basketball Game","SELLS_FASTLANE":"0","SECTION":7},"geometry":{"x":-10403711.919199999,"y":5590056.2412}}]
+  ]
 }

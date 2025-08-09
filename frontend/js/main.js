@@ -23,7 +23,7 @@ window.onload = function(e) {
 
 function addStaticLayers() {
 
-  fetch('./geojson/rides.geojson')
+  fetch('./geojson/retail_game.geojson')
     .then(response => response.json())
     .then(data => {
       L.geoJSON(data, {
