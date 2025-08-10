@@ -8,7 +8,7 @@ const PORT = process.env.PORT;
 
 ///Middleware
 app.use(express.json());
-app.use('/', routes);
+app.use('/get_rides', routes);
 
 
 app.listen(PORT, () => {
