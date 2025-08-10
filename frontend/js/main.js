@@ -105,16 +105,17 @@ function addStaticLayers() {
 function addDynamicLayers() {
  
   let ridesLayer;
+  async function loadRides() {
+    try {
+      const res = await fetch('/api/rides');
+      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+      const data = await res.json();
+      L.geoJSON(data).addTo(map);
+    } catch (err) {
+      console.error('Failed to load rides:', err);
+    }
+  }
 
-  fetch('/api/rides')
-  .then(response => response.json())
-  .then(data => {
-    ridesLayer = L.geoJSON(data, {
-      onEachFeature: (feature, layer) => {
-        layer.bindPopup(feature.properties.name);
-      }
-    }).addTo(map);
-  })
-  .catch(err => console.error('Error loading rides GeoJSON:', err));
+  loadRides();
 
 }
