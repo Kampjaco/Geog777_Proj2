@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../db/connection');
 
-router.get('/get_rides', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const query = `
         SELECT jsonb_build_object(

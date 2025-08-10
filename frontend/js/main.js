@@ -31,15 +31,25 @@ window.onload = function(e) {
 
 function addStaticLayers() {
 
+  //Map panes to ensure correct layering
+  map.createPane('sections');
+  map.createPane('sidewalk');
+  map.createPane('mainLayers');
+  
+  map.getPane('sections').style.zIndex = 400;
+  map.getPane('sidewalk').style.zIndex = 450;
+  map.getPane('mainLayers').style.zIndex = 650
+  
+
   let sectionsLayer;
   //Sections GeoJSON
   fetch('./geojson/sections.geojson')
     .then(response => response.json())
     .then(data => {
       sectionsLayer = L.geoJSON(data, {
-        style: sectionStyle
+        style: sectionStyle,
+        pane: 'sections'
       }).addTo(map);
-      console.log(sectionsLayer)
     })
     .catch(err => console.error('Error loading GeoJSON:', err));
 
@@ -49,7 +59,8 @@ function addStaticLayers() {
     .then(response => response.json())
     .then(data => {
       sidewalkLayer =L.geoJSON(data, {
-        style: sidewalkStyle
+        style: sidewalkStyle,
+        pane: 'sidewalk'
       }).addTo(map);
     })
     .catch(err => console.error('Error loading GeoJSON:', err));
@@ -62,6 +73,7 @@ function addStaticLayers() {
     .then(data => {
       retailGameLayer = L.geoJSON(data, {
         pointToLayer: retailPointToLayer,
+        pane: 'mainLayers',
         onEachFeature: (feature, layer) => {
           // Customize popup content as needed
           let popupContent = `${feature.properties.name }`;
@@ -78,6 +90,7 @@ function addStaticLayers() {
     .then(data => {
       serviceLocationLayer = L.geoJSON(data, {
         pointToLayer: servicePointToLayer,
+        pane: 'mainLayers',
         onEachFeature: (feature, layer) => {
           let popupContent = `${feature.properties.type }`;
           layer.bindPopup(popupContent);
@@ -94,7 +107,7 @@ function addDynamicLayers() {
   let ridesLayer;
 
   async function loadRides() {
-    const response = await fetch('.../backend/routes/index/get_rides');
+    const response = await fetch('/api/rides');
     if (!response.ok) {
       console.error('Failed to load rides GeoJSON');
       return;

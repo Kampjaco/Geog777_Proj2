@@ -31,11 +31,12 @@ function servicePointToLayer(feature, latlng) {
 
 function retailPointToLayer(feature, latlng) {
     return L.circleMarker(latlng, {
-        radius: 8,            // size of the circle
-        fillColor: '#800080', // purple fill
-        color: '#4B004B',     // darker purple outline
-        weight: 2,            // outline thickness
-        opacity: 1,           // outline opacity
-        fillOpacity: 1        // fill opacity
+        radius: 8,            
+        fillColor: '#800080', 
+        color: '#4B004B',     
+        weight: 2,            
+        opacity: 1,           
+        fillOpacity: 1,
+        pane: 'mainLayers'        
     });
 }

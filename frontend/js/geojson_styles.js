@@ -15,7 +15,6 @@ function sidewalkStyle(feature) {
 }
 
 function sectionStyle(feature) {
-    console.log(feature)
     if(feature.properties.section == 'Parking Lot') {
         return {
             fillColor: 'grey',
