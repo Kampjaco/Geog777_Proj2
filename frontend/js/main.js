@@ -90,11 +90,11 @@ function addStaticLayers() {
 
 
 function addDynamicLayers() {
-
+ 
   let ridesLayer;
 
   async function loadRides() {
-    const response = await fetch('/api/get_rides');
+    const response = await fetch('.../backend/routes/index/get_rides');
     if (!response.ok) {
       console.error('Failed to load rides GeoJSON');
       return;
