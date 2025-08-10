@@ -106,7 +106,7 @@ function addDynamicLayers() {
  
   let ridesLayer;
 
-  etch('/api/rides')
+  fetch('/api/rides')
   .then(response => response.json())
   .then(data => {
     ridesLayer = L.geoJSON(data, {
