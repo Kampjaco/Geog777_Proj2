@@ -1,10 +1,17 @@
+/**
+ * This file creates icon styles for the point layers
+ * 
+ * Author: Jacob Kampf
+ * Last edited: 8/10/2025
+ */
+
 function servicePointToLayer(feature, latlng) {
 
     let service = feature.properties.type;
     let bgColor = 'lightblue'
     
     let icon = L.divIcon({
-        className: 'custom-div-icon', // override Leaflet defaults in CSS if needed
+        className: 'custom-div-icon',
         html: `<div style="
             background:${bgColor};
             border-radius:8px;
@@ -20,4 +27,15 @@ function servicePointToLayer(feature, latlng) {
     });
 
     return L.marker(latlng, { icon: icon });     
+}
+
+function retailPointToLayer(feature, latlng) {
+    return L.circleMarker(latlng, {
+        radius: 8,            // size of the circle
+        fillColor: '#800080', // purple fill
+        color: '#4B004B',     // darker purple outline
+        weight: 2,            // outline thickness
+        opacity: 1,           // outline opacity
+        fillOpacity: 1        // fill opacity
+    });
 }

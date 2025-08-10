@@ -9,8 +9,21 @@
 var map;
 
 window.onload = function(e) {
+
+  //Bounding box
+  var bounds = L.latLngBounds(
+    [44.795445728284136, -93.46552743395252],
+    [44.80152956759408, -93.4476906867284]
+  )
   // Initialize map
-  map = L.map('map').setView([44.79873578568766, -93.45361939995553], 19);
+  map = L.map('map', {
+    center: [44.79873578568766, -93.45361939995553],
+    zoom: 18,
+    minZoom: 18,
+    maxZoom: 20,
+    maxBounds: bounds,
+    maxBoundsViscosity: 1.0
+  });
 
   addStaticLayers();
 }
@@ -47,16 +60,12 @@ function addStaticLayers() {
     .then(response => response.json())
     .then(data => {
       retailGameLayer = L.geoJSON(data, {
+        pointToLayer: retailPointToLayer,
         onEachFeature: (feature, layer) => {
           // Customize popup content as needed
           let popupContent = `${feature.properties.name }`;
           layer.bindPopup(popupContent);
         },
-        style: feature => ({
-          color: 'blue',
-          weight: 2,
-          fillOpacity: 1
-        })
       }).addTo(map);
     })
     .catch(err => console.error('Error loading GeoJSON:', err));
@@ -71,12 +80,7 @@ function addStaticLayers() {
         onEachFeature: (feature, layer) => {
           let popupContent = `${feature.properties.type }`;
           layer.bindPopup(popupContent);
-        },
-        style: feature => ({
-          color: 'red',
-          weight: 2,
-          fillOpacity: 1
-        })
+        }
       }).addTo(map);
     })
     .catch(err => console.error('Error loading GeoJSON:', err));
