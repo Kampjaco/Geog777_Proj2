@@ -26,6 +26,7 @@ window.onload = function(e) {
   });
 
   addStaticLayers();
+  addDynamicLayers();
 }
 
 function addStaticLayers() {
@@ -84,5 +85,53 @@ function addStaticLayers() {
       }).addTo(map);
     })
     .catch(err => console.error('Error loading GeoJSON:', err));
+
+}
+
+
+function addDynamicLayers() {
+
+  let ridesLayer;
+
+  async function loadRides() {
+    const response = await fetch('/api/get_rides');
+    if (!response.ok) {
+      console.error('Failed to load rides GeoJSON');
+      return;
+    }
+    const data = await response.json();
+
+    // Remove old layer if it exists
+    if (ridesLayer) {
+      map.removeLayer(ridesLayer);
+    }
+
+    ridesLayer = L.geoJSON(data, {
+      onEachFeature: (feature, layer) => {
+        const p = feature.properties;
+        const wait = p.avg_wait_time === null ? 'Unknown' : p.avg_wait_time;
+        const thrill = p.avg_thrill_rating === null ? '-' : p.avg_thrill_rating;
+        const popupContent = `
+          <strong>${p.name}</strong><br>
+          Type: ${p.ride_type}<br>
+          Section: ${p.section}<br>
+          Uses Fastlane: ${p.uses_fastlane}<br>
+          Avg Wait Time: ${wait} mins<br>
+          Avg Thrill Rating: ${thrill}/10
+        `;
+        layer.bindPopup(popupContent);
+      },
+      pointToLayer: (feature, latlng) =>
+        L.circleMarker(latlng, { radius: 6, color: 'red' }),
+      style: feature => ({
+        color: 'blue',
+        weight: 2,
+        opacity: 0.7,
+        fillOpacity: 0.5
+      })
+    }).addTo(map);
+  }
+
+  loadRides();
 
 }
