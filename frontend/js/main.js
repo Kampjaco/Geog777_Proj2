@@ -26,7 +26,7 @@ window.onload = function(e) {
   });
 
   addStaticLayers();
-  addDynamicLayers();
+  //addDynamicLayers();
 }
 
 function addStaticLayers() {
