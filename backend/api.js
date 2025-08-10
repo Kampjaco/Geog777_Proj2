@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
-const ridesRoutes = require('./routes/rides');
+const path = require('path');
 const pool = require('./db/connection')
 require('dotenv').config();
-const path = require('path');
+
+
+const ridesRoutes = require('./routes/rides');
 
 const PORT = process.env.PORT || 3000;
 
