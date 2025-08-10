@@ -40,3 +40,15 @@ function retailPointToLayer(feature, latlng) {
         pane: 'mainLayers'        
     });
 }
+
+function ridesPointToLayer(feature, latlng) {
+  return L.circleMarker(latlng, {
+    radius: 8,
+    fillColor: '#ff0000',   
+    color: '#800000',       
+    weight: 2,
+    opacity: 1,
+    fillOpacity: 1,
+    pane: 'mainLayers'
+  });
+}

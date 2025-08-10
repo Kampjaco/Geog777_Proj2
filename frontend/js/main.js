@@ -110,7 +110,14 @@ function addDynamicLayers() {
       const res = await fetch('/api/rides');
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
       const data = await res.json();
-      L.geoJSON(data).addTo(map);
+      ridesLayer = L.geoJSON(data, {
+        pointToLayer: ridesPointToLayer(),
+        pane: 'mainLayers',
+        onEachFeature: (feature, layer) => {
+          let popupContent = `${feature.properties.name }`;
+          layer.bindPopup(popupContent);
+        }
+      }).addTo(map);
     } catch (err) {
       console.error('Failed to load rides:', err);
     }
