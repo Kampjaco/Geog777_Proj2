@@ -28,6 +28,7 @@ function addSearch() {
         layer: searchLayerGroup,
         propertyName: 'name',
         marker: false,
+        textPlaceholder: 'Search a Ride or Dining Venue',
         moveToLocation: function(latlng, title, map) {
             map.setView(latlng, 18);
 
