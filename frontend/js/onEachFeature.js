@@ -106,9 +106,9 @@ function ridesOnEachFeature(feature, layer) {
     <div class="p-2" style="min-width:200px;">
       <h5 class="mb-2 text-primary fw-bold">${name}</h5>
       <p class="mb-1"><strong>Section:</strong> ${section}</p>
-      <p class="mb-1"><strong>Section:</strong> ${uses_fastlane}</p>
-      <p class="mb-1"><strong>Section:</strong> ${min_alone_height}</p>
-      <p class="mb-1"><strong>Section:</strong> ${min_accomp_height}</p>
+      <p class="mb-1"><strong>Uses Fastlane?:</strong> ${uses_fastlane}</p>
+      <p class="mb-1"><strong>Minimum Height to Ride Alone:</strong> ${min_alone_height} inches</p>
+      <p class="mb-1"><strong>Minimum Height to Ride Accompanied:</strong> ${min_accomp_height} inches</p>
       <p class="mb-1"><strong>Average Thrill Rating:</strong> 
         ${avg_thrill_rating != null ? `${avg_thrill_rating} / 5` : 'No submitted values'}
       </p>
@@ -124,8 +124,8 @@ function ridesOnEachFeature(feature, layer) {
                  class="form-control form-control-sm" 
                  id="thrill_rating_${ride_id}" 
                  name="thrill_rating" 
-                 placeholder="1-10" 
-                 min="1" max="10" />
+                 placeholder="1-5 - higher = more thrilling" 
+                 min="1" max="5" />
         </div>
         <button type="submit" class="btn btn-sm btn-warning w-100">Submit Thrill Rating</button>
       </form>
