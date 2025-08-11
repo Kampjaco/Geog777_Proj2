@@ -51,7 +51,7 @@ router.get('/', async (req, res) => {
 });
 
 // POST new wait time for a dining location
-router.post('/wait_time', async (req, res) => {
+router.post('/wait_time', (req, res) => {
   const { diningId, waitTime } = req.body;
 
   console.log(diningId)
@@ -69,7 +69,7 @@ router.post('/wait_time', async (req, res) => {
       RETURNING *;
     `;
 
-    const { rows } = await pool.query(query, [diningId, waitTime]);
+    const { rows } = pool.query(query, [diningId, waitTime]);
     res.status(201).json(rows[0]);
   } catch (err) {
     console.error('Error inserting dining wait time:', err);
