@@ -52,3 +52,16 @@ function ridesPointToLayer(feature, latlng) {
     pane: 'mainLayers'
   });
 }
+
+function diningPointToLayer(feature, latlng) {
+  return L.circleMarker(latlng, {
+    radius: 8,
+    fillColor: '#ffff00',   // bright yellow fill
+    color: '#999900',       // darker yellow border
+    weight: 2,
+    opacity: 1,
+    fillOpacity: 1,
+    pane: 'mainLayers'
+  });
+}
+

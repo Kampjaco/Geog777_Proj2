@@ -1,3 +1,10 @@
+/**
+ * This file is a route that dynamically gets GeoJSON data for the rides & attractions layer
+ * 
+ * Author: Jacob Kampf
+ * Last edited: 8/10/2025
+ */
+
 const express = require('express');
 const router = express.Router();
 const pool = require('../db/connection');
@@ -18,20 +25,20 @@ router.get('/', async (req, res) => {
             'name', r.name,
             'ride_type', rt.description,
             'min_alone_height', r.min_alone_height,
-			'min_accomp_height', r.min_accomp_height,
-			'section', s.name,
-			'uses_fastlane', yn.description,
-			'avg_thrill_rating', ROUND(AVG(tr.thrill_lvl)::numeric, 1),
-			'avg_wait_time', ROUND(AVG(w.wait_time)::numeric, 1)
-			
-          )
+            'min_accomp_height', r.min_accomp_height,
+            'section', s.name,
+            'uses_fastlane', yn.description,
+            'avg_thrill_rating', ROUND(AVG(tr.thrill_lvl)::numeric, 1),
+            'avg_wait_time', ROUND(AVG(w.wait_time)::numeric, 1)
+            
+            )
         ) AS feature
         FROM rides r JOIN ride_type rt ON r.type = rt.id
 					JOIN yes_no yn ON r.uses_fastlane = yn.id
 					JOIN sections s ON ST_Contains(s.geom, r.geom)
 					LEFT JOIN thrill_ratings tr ON tr.ride_id = r.id
 					LEFT JOIN wait_times w ON w.ride_id = r.id
-					GROUP BY r.id, r.name, rt.description, yn.description, s.name, r.geom
+					GROUP BY r.id, r.name, rt.description, r.min_alone_height, r.min_accomp_height, yn.description, s.name, r.geom
 										
       ) AS features;
       `;

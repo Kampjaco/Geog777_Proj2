@@ -7,18 +7,21 @@ require('dotenv').config();
 
 
 const ridesRoutes = require('./routes/rides');
+const diningRoutes = require('./routes/dining');
 
 const PORT = process.env.PORT || 3000;
 
-///Middleware
-app.use(express.static(path.join(__dirname, '../frontend')));
-
+//Allows for backend calls from frontend URL
 app.use(cors({
   origin: 'https://geog777-proj2-frontend.onrender.com'  // restrict to your frontend domain
 }));
 
+///Middleware
+app.use(express.static(path.join(__dirname, '../frontend')));
+
 app.use(express.json());
 app.use('/api/rides', ridesRoutes);
+app.use('/api/dining', diningRoutes);
 
 
 app.listen(PORT, () => {

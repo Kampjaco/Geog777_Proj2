@@ -26,7 +26,10 @@ window.onload = function(e) {
   });
 
   addStaticLayers();
-  addDynamicLayers();
+ 
+  let ridesLayer;
+  //Add rides GeoJSON layer
+  loadRides();
 }
 
 function addStaticLayers() {
@@ -102,28 +105,41 @@ function addStaticLayers() {
 }
 
 
-function addDynamicLayers() {
- 
-  let ridesLayer;
-  async function loadRides() {
-    try {
-      const res = await fetch('https://geog777-proj2-backend.onrender.com/api/rides');
-      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-      const data = await res.json();
-      console.log(data);
-      ridesLayer = L.geoJSON(data, {
-        pointToLayer: ridesPointToLayer,
-        pane: 'mainLayers',
-        onEachFeature: (feature, layer) => {
-          let popupContent = `${feature.properties.name }`;
-          layer.bindPopup(popupContent);
-        }
-      }).addTo(map);
-    } catch (err) {
-      console.error('Failed to load rides:', err);
-    }
+async function loadRides() {
+  try {
+    const res = await fetch('https://geog777-proj2-backend.onrender.com/api/rides');
+    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+    const data = await res.json();
+    console.log(data);
+    ridesLayer = L.geoJSON(data, {
+      pointToLayer: ridesPointToLayer,
+      pane: 'mainLayers',
+      onEachFeature: (feature, layer) => {
+        let popupContent = `${feature.properties.name }`;
+        layer.bindPopup(popupContent);
+      }
+    }).addTo(map);
+  } catch (err) {
+    console.error('Failed to load rides:', err);
   }
-
-  loadRides();
-
 }
+
+async function loadDining() {
+  try {
+    const res = await fetch('https://geog777-proj2-backend.onrender.com/api/dining');
+    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+    const data = await res.json();
+    console.log(data);
+    ridesLayer = L.geoJSON(data, {
+      pointToLayer: diningPointToLayer,
+      pane: 'mainLayers',
+      onEachFeature: (feature, layer) => {
+        let popupContent = `${feature.properties.name }`;
+        layer.bindPopup(popupContent);
+      }
+    }).addTo(map);
+  } catch (err) {
+    console.error('Failed to load rides:', err);
+  }
+}
+
