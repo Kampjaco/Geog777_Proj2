@@ -27,7 +27,19 @@ function addSearch() {
     const searchControl = new L.Control.Search({
         layer: searchLayerGroup,
         propertyName: 'name',
-        zoom: 19
+        marker: false,
+        moveToLocation: function(latlng, title, map) {
+            map.setView(latlng, 18);
+
+            // Find the matched feature and open its popup
+            searchLayerGroup.eachLayer(layer => {
+                layer.eachLayer(featureLayer => {
+                    if (featureLayer.feature?.properties?.name === title) {
+                        featureLayer.openPopup();
+                    }
+                });
+            });
+        }
     });
 
 
