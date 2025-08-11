@@ -5,6 +5,34 @@
  * Last edited: 8/11/2025
  */
 
+function serviceOnEachFeature(feature, layer) {
+    const { type, section } = feature.properties;
+
+    const popupContent = 
+    `
+    <div class="p-2" style="min-width:200px;">
+      <h5 class="mb-2 text-primary fw-bold">${type}</h5>
+      <p class="mb-1"><strong>Section:</strong> ${section}</p>
+    </div>
+    `;
+
+    layer.bindPopup(popupContent);
+}
+
+function retailOnEachFeature(feature, layer) {
+    const { name, sells_fastlane, section } = feature.properties;
+
+    const popupContent = 
+    `
+    <div class="p-2" style="min-width:200px;">
+      <h5 class="mb-2 text-primary fw-bold">${name}</h5>
+      <p class="mb-1"><strong>Sells Fastlane?:</strong> ${sells_fastlane}</p>
+      <p class="mb-1"><strong>Section:</strong> ${section}</p>
+    </div>
+    `;
+
+    layer.bindPopup(popupContent);    
+}
 function diningOnEachFeature(feature, layer) {
     const { name, section, dining_id, snack_plan, dining_plan, avg_wait_time } = feature.properties;
 
@@ -14,7 +42,7 @@ function diningOnEachFeature(feature, layer) {
       <p class="mb-1"><strong>Section:</strong> ${section}</p>
       <p class="mb-1"><strong>Accepts Snack Plans?:</strong> ${snack_plan}</p>
       <p class="mb-1"><strong>Accepts Dining Plans?:</strong> ${dining_plan}</p>
-      <p class="mb-1"><strong>Average Wait Time:</strong> ${avg_wait_time ?? 'No submitted values'}</p>
+      <p class="mb-1"><strong>Average Wait Time:</strong> ${avg_wait_time ` minutes`?? 'No submitted values'}</p>
       <form class="update-wait-form" data-id="${dining_id}">
         <div class="mb-2">
           <label for="current_wait_${dining_id}" class="form-label mb-0"><strong>Submit a wait time</strong></label>
