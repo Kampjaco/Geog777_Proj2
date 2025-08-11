@@ -66,7 +66,7 @@ router.post('/wait_time', async (req, res) => {
   try {
     const query = `
       INSERT INTO wait_times (ride_id, dining_id, waitTime, created_at)
-      VALUES (NULL, $1, $2, NOW())
+      VALUES (NULL, ${diningId}, ${waitTime}, NOW())
       RETURNING *;
     `;
 
