@@ -17,7 +17,7 @@ function diningOnEachFeature(feature, layer) {
       <p class="mb-1"><strong>Average Wait Time:</strong> ${avg_wait_time ?? 'No submitted values'}</p>
       <form class="update-wait-form" data-id="${dining_id}">
         <div class="mb-2">
-          <label for="current_wait_${dining_id}" class="form-label mb-0"><strong>Current Wait Time</strong></label>
+          <label for="current_wait_${dining_id}" class="form-label mb-0"><strong>Submit a wait time</strong></label>
           <input type="number" 
                  class="form-control form-control-sm" 
                  id="current_wait_${dining_id}" 
@@ -25,10 +25,38 @@ function diningOnEachFeature(feature, layer) {
                  placeholder="minutes" 
                  min="0" />
         </div>
-        <button type="submit" class="btn btn-sm btn-success w-100">Submit wait time</button>
+        <button type="submit" class="btn btn-sm btn-success w-100">Submit</button>
       </form>
     </div>
     `;
 
-  layer.bindPopup(popupContent)
+    layer.bindPopup(popupContent);
+
+    // Handle form submission when popup opens
+    layer.on('popupopen', () => {
+        const form = document.querySelector(`.update-wait-form[data-id="${dining_id}"]`);
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const waitTime = formData.get('current_wait');
+
+            if (!waitTime) {
+                alert('Please enter a wait time.');
+                return;
+            }
+
+            const res = await fetch(`https://your-backend-url/api/dining/${dining_id}/wait-time`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ dining_id: dining_id, wait_time: waitTime })
+            });
+
+            if (res.ok) {
+                layer.closePopup();
+                loadDining(); // reload the dining layer from backend
+            } else {
+                alert('Failed to update wait time.');
+            }
+            });
+    });
 }

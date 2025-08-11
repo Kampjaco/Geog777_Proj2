@@ -1,8 +1,9 @@
 /**
  * This file is a route that dynamically gets GeoJSON data for the dining locations layer
+ * It also has a route that uses the dining ID to update wait times for that specific location
  * 
  * Author: Jacob Kampf
- * Last edited: 8/10/2025
+ * Last edited: 8/11/2025
  */
 
 const express = require('express');
@@ -46,6 +47,30 @@ router.get('/', async (req, res) => {
   } catch (err) {
     console.error('Error fetching rides GeoJSON:', err);
     res.status(500).send('Failed to fetch dining location data');
+  }
+});
+
+// POST new wait time for a dining location
+router.post('/:dining_id/wait-time', async (req, res) => {
+  const diningId = parseInt(req.params.dining_id, 10);
+  const { wait_time } = req.body;
+
+  if (!wait_time || isNaN(wait_time) || wait_time < 0) {
+    return res.status(400).json({ error: 'Invalid wait_time' });
+  }
+
+  try {
+    const query = `
+      INSERT INTO wait_times (ride_id, dining_id, wait_time, created_at)
+      VALUES (NULL, $1, $2, NOW())
+      RETURNING *;
+    `;
+
+    const { rows } = await pool.query(query, [diningId, wait_time]);
+    res.status(201).json(rows[0]);
+  } catch (err) {
+    console.error('Error inserting dining wait time:', err);
+    res.status(500).json({ error: 'Failed to insert dining wait time' });
   }
 });
 
