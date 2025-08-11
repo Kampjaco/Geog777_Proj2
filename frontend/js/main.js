@@ -98,11 +98,7 @@ function addStaticLayers() {
         L.geoJSON(data, {
           pointToLayer: retailPointToLayer,
           pane: 'mainLayers',
-          onEachFeature: (feature, layer) => {
-            // Customize popup content as needed
-            let popupContent = `${feature.properties.name }`;
-            layer.bindPopup(popupContent);
-          },
+          onEachFeature: retailOnEachFeature,
         }).addTo(map);
       })
       .catch(err => console.error('Error loading GeoJSON:', err));
@@ -116,10 +112,7 @@ function addStaticLayers() {
         serviceLayer = L.geoJSON(data, {
           pointToLayer: servicePointToLayer,
           pane: 'mainLayers',
-          onEachFeature: (feature, layer) => {
-            let popupContent = `${feature.properties.type }`;
-            layer.bindPopup(popupContent);
-          }
+          onEachFeature: serviceOnEachFeature
         })
         serviceLayer.addTo(map);
       })

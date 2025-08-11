@@ -42,7 +42,7 @@ function diningOnEachFeature(feature, layer) {
       <p class="mb-1"><strong>Section:</strong> ${section}</p>
       <p class="mb-1"><strong>Accepts Snack Plans?:</strong> ${snack_plan}</p>
       <p class="mb-1"><strong>Accepts Dining Plans?:</strong> ${dining_plan}</p>
-      <p class="mb-1"><strong>Average Wait Time:</strong>  ${avg_wait_time != null ? `${avg_wait_time} minutes` : 'No submitted values'}</p>
+      <p class="mb-1"><strong>Average Wait Time:</strong>  ${avg_wait_time != null ? `${Math.round(avg_wait_time)} minutes` : 'No submitted values'}</p>
       <form class="update-wait-form" data-id="${dining_id}">
         <div class="mb-2">
           <label for="current_wait_${dining_id}" class="form-label mb-0"><strong>Submit a wait time</strong></label>
