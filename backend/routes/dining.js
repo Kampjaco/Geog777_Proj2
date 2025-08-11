@@ -64,23 +64,25 @@ router.post('/wait_time', async (req, res) => {
   }
 
   try {
-  const query = `
-    INSERT INTO wait_times (ride_id, dining_id, wait_time)
-    VALUES ($1, $2, $3)
-    RETURNING *
-  `;
+    const query = `
+      INSERT INTO wait_times (ride_id, dining_id, wait_time)
+      VALUES (NULL, ${diningId}, ${waitTime})
+    `;
 
-  const values = [null, diningId, waitTime];
-  const { rows } = await pool.query(query, values);
-
-  res.status(201).json({ message: 'Wait time inserted successfully' });
+    const { rows } = await pool.query(query, [diningId, waitTime]);
+    res.status(201).json(rows[0]);
   } catch (err) {
-    console.log('Incoming data:', req.body);
+    console.log('Incoming data', req.body)
     console.error('Error inserting dining wait time:', err);
     res.status(500).json({ error: 'Failed to insert dining wait time' });
   }
-
 });
 
 
+
+router.post('/wait_time', (req, res) => {
+  console.log('Headers:', req.headers);
+  console.log('Raw Body:', req.body);
+  res.json({ message: 'Got it' });
+});
 module.exports = router;
