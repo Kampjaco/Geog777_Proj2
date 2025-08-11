@@ -155,10 +155,7 @@ async function loadDining() {
     diningLayer = L.geoJSON(data, {
       pointToLayer: diningPointToLayer,
       pane: 'mainLayers',
-      onEachFeature: (feature, layer) => {
-        let popupContent = `${feature.properties.name }`;
-        layer.bindPopup(popupContent);
-      }
+      onEachFeature: diningOnEachFeature
     });
     diningLayer.addTo(map);
   } catch (err) {
