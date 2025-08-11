@@ -73,6 +73,7 @@ router.post('/wait_time', async (req, res) => {
     const { rows } = await pool.query(query, [diningId, waitTime]);
     res.status(201).json(rows[0]);
   } catch (err) {
+    console.log('Incoming data', req.body)
     console.error('Error inserting dining wait time:', err);
     res.status(500).json({ error: 'Failed to insert dining wait time' });
   }
