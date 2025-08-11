@@ -47,7 +47,7 @@ function diningOnEachFeature(feature, layer) {
             }
 
             console.log(dining_id)
-            console.log(typeof(diningId))
+            console.log(typeof(dining_id))
             console.log(waitTime)
             fetch(`https://geog777-proj2-backend.onrender.com/api/dining/${dining_id}/wait-time`, {
                 method: 'POST',
