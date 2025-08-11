@@ -33,6 +33,7 @@ function retailOnEachFeature(feature, layer) {
 
     layer.bindPopup(popupContent);    
 }
+
 function diningOnEachFeature(feature, layer) {
     const { name, section, dining_id, snack_plan, dining_plan, avg_wait_time } = feature.properties;
 
@@ -90,6 +91,119 @@ function diningOnEachFeature(feature, layer) {
             .then(() => {
                 layer.closePopup();
                 loadDining(); // reload the dining layer from backend
+            })
+            .catch(err => {
+                alert(err.message);
+            });
+        });
+    });
+}
+
+function ridesOnEachFeature(feature, layer) {
+    const { name, section, ride_id, uses_fastlane, min_alone_height, min_accomp_height, avg_thrill_rating, avg_wait_time } = feature.properties;
+
+    const popupContent = `
+    <div class="p-2" style="min-width:200px;">
+      <h5 class="mb-2 text-primary fw-bold">${name}</h5>
+      <p class="mb-1"><strong>Section:</strong> ${section}</p>
+      <p class="mb-1"><strong>Section:</strong> ${uses_fastlane}</p>
+      <p class="mb-1"><strong>Section:</strong> ${min_alone_height}</p>
+      <p class="mb-1"><strong>Section:</strong> ${min_accomp_height}</p>
+      <p class="mb-1"><strong>Average Thrill Rating:</strong> 
+        ${avg_thrill_rating != null ? `${avg_thrill_rating} / 5` : 'No submitted values'}
+      </p>
+      <p class="mb-1"><strong>Average Wait Time:</strong>  
+        ${avg_wait_time != null ? `${Math.round(avg_wait_time)} minutes` : 'No submitted values'}
+      </p>
+
+      <!-- Thrill Rating Form -->
+      <form class="update-thrill-form" data-id="${ride_id}">
+        <div class="mb-2">
+          <label for="thrill_rating_${ride_id}" class="form-label mb-0"><strong>Submit Thrill Rating</strong></label>
+          <input type="number" 
+                 class="form-control form-control-sm" 
+                 id="thrill_rating_${ride_id}" 
+                 name="thrill_rating" 
+                 placeholder="1-10" 
+                 min="1" max="10" />
+        </div>
+        <button type="submit" class="btn btn-sm btn-warning w-100">Submit Thrill Rating</button>
+      </form>
+
+      <!-- Wait Time Form -->
+      <form class="update-wait-form" data-id="${ride_id}">
+        <div class="mb-2 mt-3">
+          <label for="wait_time_${ride_id}" class="form-label mb-0"><strong>Submit Wait Time</strong></label>
+          <input type="number" 
+                 class="form-control form-control-sm" 
+                 id="wait_time_${ride_id}" 
+                 name="wait_time" 
+                 placeholder="minutes" 
+                 min="0" />
+        </div>
+        <button type="submit" class="btn btn-sm btn-success w-100">Submit Wait Time</button>
+      </form>
+    </div>
+    `;
+
+    layer.bindPopup(popupContent);
+
+    // Handle form submissions when popup opens
+    layer.on('popupopen', () => {
+        // Thrill Rating form
+        const thrillForm = document.querySelector(`.update-thrill-form[data-id="${ride_id}"]`);
+        thrillForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(thrillForm);
+            const thrillRating = formData.get('thrill_rating');
+
+            if (!thrillRating) {
+                alert('Please enter a thrill rating.');
+                return;
+            }
+
+            fetch(`https://geog777-proj2-backend.onrender.com/api/rides/thrill_rating`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ rideId: ride_id, thrillRating: thrillRating }),
+            })
+            .then(res => {
+                if (!res.ok) throw new Error('Failed to update thrill rating.');
+                return res.json();
+            })
+            .then(() => {
+                layer.closePopup();
+                loadRides(); // reload rides layer
+            })
+            .catch(err => {
+                alert(err.message);
+            });
+        });
+
+        // Wait Time form
+        const waitForm = document.querySelector(`.update-wait-form[data-id="${ride_id}"]`);
+        waitForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(waitForm);
+            const waitTime = formData.get('wait_time');
+
+            if (!waitTime) {
+                alert('Please enter a wait time.');
+                return;
+            }
+
+            fetch(`https://geog777-proj2-backend.onrender.com/api/rides/wait_time`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ rideId: ride_id, waitTime: waitTime }),
+            })
+            .then(res => {
+                if (!res.ok) throw new Error('Failed to update wait time.');
+                return res.json();
+            })
+            .then(() => {
+                layer.closePopup();
+                loadRides(); // reload rides layer
             })
             .catch(err => {
                 alert(err.message);
