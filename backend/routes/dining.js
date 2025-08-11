@@ -25,14 +25,14 @@ router.get('/', async (req, res) => {
             'dining_id', dl.dl_id,
             'name', dl.name,
 			'dining_plan', yn.description,
-			'snack_plan', yn.description,
+			'snack_plan', yn2.description,
 			'section', s.name,
 			'avg_wait_time', ROUND(AVG(w.wait_time)::numeric, 1)
 			
           )
         ) AS feature
         FROM dining_locations dl JOIN yes_no yn ON dl.dining_plan = yn.id
-					JOIN yes_no yn2 ON dl.snack_plan = yn.id
+					JOIN yes_no yn2 ON dl.snack_plan = yn2.id
 					JOIN sections s ON ST_Contains(s.geom, dl.geom)
 					LEFT JOIN wait_times w ON w.dining_id = dl.dl_id
 					GROUP BY dl.dl_id, dl.name, yn.description, yn2.description, s.name, dl.geom
