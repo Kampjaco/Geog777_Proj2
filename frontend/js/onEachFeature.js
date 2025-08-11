@@ -64,7 +64,7 @@ function diningOnEachFeature(feature, layer) {
     //     });
     // });
 
-    fetch('https://geog777-proj2-backend.onrender.com/test', {
+    fetch('https://geog777-proj2-backend.onrender.com/api/dining/test', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ test: 'data' }),
