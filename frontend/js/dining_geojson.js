@@ -1,0 +1,53 @@
+var diningGeoJson =
+{
+  "displayFieldName" : "",
+  "fieldAliases" : {
+    "OBJECTID" : "OBJECTID",
+    "DL_ID" : "Dining Location ID",
+    "DINING_PLAN" : "Dining Plans Accepted?",
+    "SNACK_PLAN" : "Snack Plans Accepted?",
+    "SECTION" : "Section ID",
+    "NAME" : "Venue Name"
+  },
+  "geometryType" : "esriGeometryPoint",
+  "spatialReference" : {
+    "wkid" : 102100,
+    "latestWkid" : 3857
+  },
+  "fields" : [
+    {
+      "name" : "OBJECTID",
+      "type" : "esriFieldTypeOID",
+      "alias" : "OBJECTID"
+    },
+    {
+      "name" : "DL_ID",
+      "type" : "esriFieldTypeInteger",
+      "alias" : "Dining Location ID"
+    },
+    {
+      "name" : "DINING_PLAN",
+      "type" : "esriFieldTypeString",
+      "alias" : "Dining Plans Accepted?",
+      "length" : 3
+    },
+    {
+      "name" : "SNACK_PLAN",
+      "type" : "esriFieldTypeString",
+      "alias" : "Snack Plans Accepted?",
+      "length" : 3
+    },
+    {
+      "name" : "SECTION",
+      "type" : "esriFieldTypeSmallInteger",
+      "alias" : "Section ID"
+    },
+    {
+      "name" : "NAME",
+      "type" : "esriFieldTypeString",
+      "alias" : "Venue Name",
+      "length" : 125
+    }
+  ],
+  "features" : [{"attributes":{"OBJECTID":2,"DL_ID":200001,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":2,"NAME":"Coca-Cola & ICEE"},"geometry":{"x":-10403923.527799999,"y":5590003.118900001}},{"attributes":{"OBJECTID":3,"DL_ID":200002,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":5,"NAME":"Coca-Cola Refills"},"geometry":{"x":-10403002.1435,"y":5589725.8470999971}},{"attributes":{"OBJECTID":4,"DL_ID":200003,"DINING_PLAN":"0","SNACK_PLAN":"1","SECTION":7,"NAME":"Dippin' Dots"},"geometry":{"x":-10403863.84,"y":5590083.9663999975}},{"attributes":{"OBJECTID":5,"DL_ID":200004,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":8,"NAME":"Gateway Grounds"},"geometry":{"x":-10403271.359300001,"y":5589872.314000003}},{"attributes":{"OBJECTID":6,"DL_ID":200005,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":6,"NAME":"Midway Fudge & Taffy"},"geometry":{"x":-10403271.6587,"y":5589842.6740000024}},{"attributes":{"OBJECTID":7,"DL_ID":200006,"DINING_PLAN":"0","SNACK_PLAN":"1","SECTION":8,"NAME":"Auntie Anne's | Cinnabon"},"geometry":{"x":-10403310.460000001,"y":5589879.4394999966}},{"attributes":{"OBJECTID":8,"DL_ID":200007,"DINING_PLAN":"1","SNACK_PLAN":"0","SECTION":8,"NAME":"Panda Express"},"geometry":{"x":-10403283.1853,"y":5589962.5811000019}},{"attributes":{"OBJECTID":9,"DL_ID":200008,"DINING_PLAN":"1","SNACK_PLAN":"0","SECTION":8,"NAME":"Lucky Loon Kitchen"},"geometry":{"x":-10403298.053400001,"y":5590005.6538999975}},{"attributes":{"OBJECTID":10,"DL_ID":200009,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":8,"NAME":"Boathouse Refreshments"},"geometry":{"x":-10403343.749,"y":5590028.4786999971}},{"attributes":{"OBJECTID":11,"DL_ID":200010,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":8,"NAME":"Superior Bar"},"geometry":{"x":-10403347.638699999,"y":5590067.3567999974}},{"attributes":{"OBJECTID":12,"DL_ID":200011,"DINING_PLAN":"0","SNACK_PLAN":"1","SECTION":8,"NAME":"Superior Funnel Cake Co."},"geometry":{"x":-10403440.6962,"y":5590121.9481000006}},{"attributes":{"OBJECTID":13,"DL_ID":200012,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":6,"NAME":"Popcorn"},"geometry":{"x":-10403437.522600001,"y":5589854.6497000009}},{"attributes":{"OBJECTID":14,"DL_ID":200013,"DINING_PLAN":"1","SNACK_PLAN":"0","SECTION":6,"NAME":"Subway"},"geometry":{"x":-10403504.616599999,"y":5589884.9782999977}},{"attributes":{"OBJECTID":15,"DL_ID":200014,"DINING_PLAN":"1","SNACK_PLAN":"0","SECTION":6,"NAME":"Fryer Tuck's Homemade French Fries"},"geometry":{"x":-10403530.394400001,"y":5589899.439000003}},{"attributes":{"OBJECTID":16,"DL_ID":200015,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":6,"NAME":"Roasted Corn"},"geometry":{"x":-10403538.807399999,"y":5589881.565200001}},{"attributes":{"OBJECTID":17,"DL_ID":200016,"DINING_PLAN":"0","SNACK_PLAN":"1","SECTION":6,"NAME":"Xtreme Confections"},"geometry":{"x":-10403578.2075,"y":5589917.4324999973}},{"attributes":{"OBJECTID":18,"DL_ID":200017,"DINING_PLAN":"1","SNACK_PLAN":"0","SECTION":6,"NAME":"Coasters"},"geometry":{"x":-10403571.3814,"y":5589825.6983999982}},{"attributes":{"OBJECTID":19,"DL_ID":200018,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":6,"NAME":"21° and Colder"},"geometry":{"x":-10403622.727299999,"y":5589829.4408000037}},{"attributes":{"OBJECTID":20,"DL_ID":200019,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":6,"NAME":"Wild Thing Brews & Spirits"},"geometry":{"x":-10403715.1501,"y":5589949.8268999979}},{"attributes":{"OBJECTID":21,"DL_ID":200020,"DINING_PLAN":"1","SNACK_PLAN":"0","SECTION":3,"NAME":"PLANET SNOOPY Grill"},"geometry":{"x":-10403625.8015,"y":5590128.5001000017}},{"attributes":{"OBJECTID":22,"DL_ID":200021,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":7,"NAME":"Cool & Creamy"},"geometry":{"x":-10403764.911599999,"y":5590051.8554000035}},{"attributes":{"OBJECTID":23,"DL_ID":200022,"DINING_PLAN":"1","SNACK_PLAN":"0","SECTION":7,"NAME":"Northwoods Pizzeria"},"geometry":{"x":-10403860.236099999,"y":5590101.5595000014}},{"attributes":{"OBJECTID":24,"DL_ID":200023,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":7,"NAME":"Renegade Smokehouse"},"geometry":{"x":-10403899.965700001,"y":5590150.1015999988}},{"attributes":{"OBJECTID":25,"DL_ID":200024,"DINING_PLAN":"1","SNACK_PLAN":"0","SECTION":7,"NAME":"Senor Vargas'"},"geometry":{"x":-10403976.3408,"y":5590105.2718999982}},{"attributes":{"OBJECTID":26,"DL_ID":200025,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":2,"NAME":"Snack Shack"},"geometry":{"x":-10403950.1439,"y":5590028.7769000009}},{"attributes":{"OBJECTID":27,"DL_ID":200026,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":2,"NAME":"Surfside Bar"},"geometry":{"x":-10403967.838099999,"y":5589971.682599999}},{"attributes":{"OBJECTID":28,"DL_ID":200027,"DINING_PLAN":"1","SNACK_PLAN":"0","SECTION":2,"NAME":"Beach Bites"},"geometry":{"x":-10403956.281500001,"y":5589950.4856000021}},{"attributes":{"OBJECTID":29,"DL_ID":200028,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":2,"NAME":"Schooner's Bar"},"geometry":{"x":-10403941.9705,"y":5589938.0907000005}},{"attributes":{"OBJECTID":30,"DL_ID":200029,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":2,"NAME":"Coca-Cola & ICEE"},"geometry":{"x":-10403890.5646,"y":5589991.6521999985}},{"attributes":{"OBJECTID":31,"DL_ID":200030,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":7,"NAME":"Coca-Cola & ICEE"},"geometry":{"x":-10403710.090299999,"y":5590020.2741999999}},{"attributes":{"OBJECTID":32,"DL_ID":200031,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":8,"NAME":"Coca-Cola & ICEE"},"geometry":{"x":-10403344.323799999,"y":5590011.4253000021}},{"attributes":{"OBJECTID":33,"DL_ID":200032,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":6,"NAME":"Coca-Cola Refills"},"geometry":{"x":-10403301.627900001,"y":5589858.6317000017}},{"attributes":{"OBJECTID":34,"DL_ID":200033,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":3,"NAME":"Dippin' Dots"},"geometry":{"x":-10403612.248600001,"y":5590080.6318999976}},{"attributes":{"OBJECTID":35,"DL_ID":200034,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":6,"NAME":"Dippin' Dots"},"geometry":{"x":-10403674.4924,"y":5589969.1677000001}},{"attributes":{"OBJECTID":36,"DL_ID":200035,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":6,"NAME":"Dippin' Dots"},"geometry":{"x":-10403468.180500001,"y":5589908.300999999}},{"attributes":{"OBJECTID":37,"DL_ID":200036,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":8,"NAME":"Dippin' Dots"},"geometry":{"x":-10403311.979800001,"y":5589927.4227000028}},{"attributes":{"OBJECTID":38,"DL_ID":200037,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":5,"NAME":"Dippin' Dots"},"geometry":{"x":-10402956.696799999,"y":5589661.2415999994}},{"attributes":{"OBJECTID":39,"DL_ID":200038,"DINING_PLAN":"0","SNACK_PLAN":"0","SECTION":2,"NAME":"Dippin' Dots"},"geometry":{"x":-10403934.6653,"y":5589966.1737999991}}]
+}

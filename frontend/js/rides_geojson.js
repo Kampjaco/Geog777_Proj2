@@ -1,0 +1,1070 @@
+var rideGeoJson =
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.458802191,
+          44.798573988
+        ]
+      },
+      "properties": {
+        "name": "Wild Thing",
+        "ride_id": 100044,
+        "section": "Southern Section",
+        "ride_type": "Roller Coaster",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 48,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.457740951,
+          44.799503418
+        ]
+      },
+      "properties": {
+        "name": "Cosmic Coaster",
+        "ride_id": 100009,
+        "section": "Planet Snoopy",
+        "ride_type": "Roller Coaster",
+        "uses_fastlane": "No",
+        "min_alone_height": 42,
+        "min_accomp_height": 41
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.457928803,
+          44.800461041
+        ]
+      },
+      "properties": {
+        "name": "High Roller",
+        "ride_id": 100015,
+        "section": "Planet Snoopy",
+        "ride_type": "Roller Coaster",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 48,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.457543846,
+          44.800216218
+        ]
+      },
+      "properties": {
+        "name": "Linus' Beetle Bugs",
+        "ride_id": 100019,
+        "section": "Planet Snoopy",
+        "ride_type": "Roller Coaster",
+        "uses_fastlane": "No",
+        "min_alone_height": 0,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.451644104,
+          44.797909545
+        ]
+      },
+      "properties": {
+        "name": "Steel Venom",
+        "ride_id": 100038,
+        "section": "Eastern Section",
+        "ride_type": "Roller Coaster",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 52,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.462034633,
+          44.799534734
+        ]
+      },
+      "properties": {
+        "name": "Excalibur",
+        "ride_id": 100011,
+        "section": "Western Section",
+        "ride_type": "Roller Coaster",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 48,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.45925726,
+          44.799850883
+        ]
+      },
+      "properties": {
+        "name": "Mad Mouse",
+        "ride_id": 100021,
+        "section": "Western Section",
+        "ride_type": "Roller Coaster",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 48,
+        "min_accomp_height": 42
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.460996149,
+          44.800508044
+        ]
+      },
+      "properties": {
+        "name": "Renegade",
+        "ride_id": 100031,
+        "section": "Western Section",
+        "ride_type": "Roller Coaster",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 48,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.455453807,
+          44.799366941
+        ]
+      },
+      "properties": {
+        "name": "Corkscrew",
+        "ride_id": 100008,
+        "section": "Northern Section",
+        "ride_type": "Roller Coaster",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 48,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.456913078,
+          44.800338592
+        ]
+      },
+      "properties": {
+        "name": "Lucy's Tugboat",
+        "ride_id": 100020,
+        "section": "Northern Section",
+        "ride_type": "Roller Coaster",
+        "uses_fastlane": "No",
+        "min_alone_height": 42,
+        "min_accomp_height": 41
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.455996852,
+          44.799065375
+        ]
+      },
+      "properties": {
+        "name": "Bumper Cars",
+        "ride_id": 100005,
+        "section": "Southern Section",
+        "ride_type": "Family Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 54,
+        "min_accomp_height": 48
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.45581561,
+          44.798305365
+        ]
+      },
+      "properties": {
+        "name": "SuperCat",
+        "ride_id": 100039,
+        "section": "Southern Section",
+        "ride_type": "Family Ride",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 52,
+        "min_accomp_height": 51
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.454466059,
+          44.798088849
+        ]
+      },
+      "properties": {
+        "name": "Train Station South",
+        "ride_id": 100049,
+        "section": "Southern Section",
+        "ride_type": "Family Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 0,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.457575323,
+          44.800027893
+        ]
+      },
+      "properties": {
+        "name": "Charlie Brown's Wind-Up",
+        "ride_id": 100007,
+        "section": "Planet Snoopy",
+        "ride_type": "Family Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 42,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.457917659,
+          44.799763391
+        ]
+      },
+      "properties": {
+        "name": "Flying Ace Balloon Race",
+        "ride_id": 100013,
+        "section": "Planet Snoopy",
+        "ride_type": "Family Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 48,
+        "min_accomp_height": 47
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.451535853,
+          44.797574493
+        ]
+      },
+      "properties": {
+        "name": "Antique Autos",
+        "ride_id": 100001,
+        "section": "Eastern Section",
+        "ride_type": "Family Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 48,
+        "min_accomp_height": 47
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.453398745,
+          44.797930481
+        ]
+      },
+      "properties": {
+        "name": "Flying Eagles",
+        "ride_id": 100014,
+        "section": "Eastern Section",
+        "ride_type": "Family Ride",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 44,
+        "min_accomp_height": 36
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.452049927,
+          44.797696566
+        ]
+      },
+      "properties": {
+        "name": "Scrambler",
+        "ride_id": 100034,
+        "section": "Eastern Section",
+        "ride_type": "Family Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 36,
+        "min_accomp_height": 35
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.453642193,
+          44.798195758
+        ]
+      },
+      "properties": {
+        "name": "Tilter",
+        "ride_id": 100042,
+        "section": "Eastern Section",
+        "ride_type": "Family Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 46,
+        "min_accomp_height": 45
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.459422922,
+          44.800267105
+        ]
+      },
+      "properties": {
+        "name": "Wheel of Fortune",
+        "ride_id": 100043,
+        "section": "Western Section",
+        "ride_type": "Family Ride",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 42,
+        "min_accomp_height": 41
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.454775274,
+          44.798792419
+        ]
+      },
+      "properties": {
+        "name": "Carousel",
+        "ride_id": 100006,
+        "section": "Northern Section",
+        "ride_type": "Family Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 42,
+        "min_accomp_height": 41
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.455725874,
+          44.799725724
+        ]
+      },
+      "properties": {
+        "name": "Ferris Wheel",
+        "ride_id": 100012,
+        "section": "Northern Section",
+        "ride_type": "Family Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 48,
+        "min_accomp_height": 47
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.455277005,
+          44.800023282
+        ]
+      },
+      "properties": {
+        "name": "Monster",
+        "ride_id": 100022,
+        "section": "Northern Section",
+        "ride_type": "Family Ride",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 46,
+        "min_accomp_height": 45
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.456938512,
+          44.800082955
+        ]
+      },
+      "properties": {
+        "name": "Train Station North",
+        "ride_id": 100050,
+        "section": "Northern Section",
+        "ride_type": "Family Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 0,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.457664897,
+          44.799861022
+        ]
+      },
+      "properties": {
+        "name": "Kite Eating Tree",
+        "ride_id": 100017,
+        "section": "Planet Snoopy",
+        "ride_type": "Kiddie Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 36,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.457713322,
+          44.800323907
+        ]
+      },
+      "properties": {
+        "name": "Linus Launcher",
+        "ride_id": 100018,
+        "section": "Planet Snoopy",
+        "ride_type": "Kiddie Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 42,
+        "min_accomp_height": 36
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.457540751,
+          44.7995794
+        ]
+      },
+      "properties": {
+        "name": "PEANUTS 500",
+        "ride_id": 100027,
+        "section": "Planet Snoopy",
+        "ride_type": "Kiddie Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 36,
+        "min_accomp_height": 35
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.457470323,
+          44.79977552
+        ]
+      },
+      "properties": {
+        "name": "PEANUTS Road Rally",
+        "ride_id": 100028,
+        "section": "Planet Snoopy",
+        "ride_type": "Kiddie Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 36,
+        "min_accomp_height": 35
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.457897212,
+          44.80003287
+        ]
+      },
+      "properties": {
+        "name": "Sally's Swing Set",
+        "ride_id": 100033,
+        "section": "Planet Snoopy",
+        "ride_type": "Kiddie Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 36,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.457598238,
+          44.799463331
+        ]
+      },
+      "properties": {
+        "name": "Snoopy's Deep Sea Divers",
+        "ride_id": 100035,
+        "section": "Planet Snoopy",
+        "ride_type": "Kiddie Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 36,
+        "min_accomp_height": 35
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.457411917,
+          44.800498789
+        ]
+      },
+      "properties": {
+        "name": "Snoopy's Rocket Express",
+        "ride_id": 100036,
+        "section": "Planet Snoopy",
+        "ride_type": "Kiddie Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 42,
+        "min_accomp_height": 41
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.457661317,
+          44.800463079
+        ]
+      },
+      "properties": {
+        "name": "Woodstock Whirlybirds",
+        "ride_id": 100045,
+        "section": "Planet Snoopy",
+        "ride_type": "Kiddie Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 36,
+        "min_accomp_height": 35
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.458061186,
+          44.799400687
+        ]
+      },
+      "properties": {
+        "name": "Snoopy vs. Red Baron",
+        "ride_id": 100047,
+        "section": "Western Section",
+        "ride_type": "Kiddie Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 0,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.456378616,
+          44.800342495
+        ]
+      },
+      "properties": {
+        "name": "PEANUTS Playhouse",
+        "ride_id": 100048,
+        "section": "Northern Section",
+        "ride_type": "Kiddie Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 35,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.456877727,
+          44.799500914
+        ]
+      },
+      "properties": {
+        "name": "Power Tower",
+        "ride_id": 100029,
+        "section": "Southern Section",
+        "ride_type": "High Thrill",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 48,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.457103146,
+          44.799107164
+        ]
+      },
+      "properties": {
+        "name": "Xtreme Swing",
+        "ride_id": 100046,
+        "section": "Southern Section",
+        "ride_type": "High Thrill",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 48,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.451298316,
+          44.797688933
+        ]
+      },
+      "properties": {
+        "name": "Delirious",
+        "ride_id": 100010,
+        "section": "Eastern Section",
+        "ride_type": "High Thrill",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 48,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.453862496,
+          44.798311486
+        ]
+      },
+      "properties": {
+        "name": "North Star",
+        "ride_id": 100023,
+        "section": "Eastern Section",
+        "ride_type": "High Thrill",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 44,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.451881438,
+          44.797344282
+        ]
+      },
+      "properties": {
+        "name": "Northern Lights",
+        "ride_id": 100024,
+        "section": "Eastern Section",
+        "ride_type": "High Thrill",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 48,
+        "min_accomp_height": 42
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.459264742,
+          44.799042173
+        ]
+      },
+      "properties": {
+        "name": "Breakers Bay Wave Pool",
+        "ride_id": 100002,
+        "section": "Soak City",
+        "ride_type": "Water Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 42,
+        "min_accomp_height": 41
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.458324567,
+          44.799488931
+        ]
+      },
+      "properties": {
+        "name": "Breakers Pipeline",
+        "ride_id": 100003,
+        "section": "Soak City",
+        "ride_type": "Water Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 48,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.45826028,
+          44.799474945
+        ]
+      },
+      "properties": {
+        "name": "Breakers Plunge",
+        "ride_id": 100004,
+        "section": "Soak City",
+        "ride_type": "Water Ride",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 48,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.460748751,
+          44.799885649
+        ]
+      },
+      "properties": {
+        "name": "Hurricane Falls",
+        "ride_id": 100016,
+        "section": "Soak City",
+        "ride_type": "Water Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 46,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.461377705,
+          44.799845162
+        ]
+      },
+      "properties": {
+        "name": "Panic Falls Body Slides",
+        "ride_id": 100025,
+        "section": "Soak City",
+        "ride_type": "Water Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 46,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.461342007,
+          44.79985032
+        ]
+      },
+      "properties": {
+        "name": "Panic Falls Speed Sllides",
+        "ride_id": 100026,
+        "section": "Soak City",
+        "ride_type": "Water Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 56,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.459895431,
+          44.799661046
+        ]
+      },
+      "properties": {
+        "name": "Barefoot Beach",
+        "ride_id": 100030,
+        "section": "Soak City",
+        "ride_type": "Water Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 0,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.460451632,
+          44.799843766
+        ]
+      },
+      "properties": {
+        "name": "Ripple Rapids",
+        "ride_id": 100032,
+        "section": "Soak City",
+        "ride_type": "Water Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 42,
+        "min_accomp_height": 41
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.460772027,
+          44.799155393
+        ]
+      },
+      "properties": {
+        "name": "Splash Station",
+        "ride_id": 100037,
+        "section": "Soak City",
+        "ride_type": "Water Ride",
+        "uses_fastlane": "No",
+        "min_alone_height": 0,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.462619485,
+          44.800394515
+        ]
+      },
+      "properties": {
+        "name": "Thunder Canyon",
+        "ride_id": 100041,
+        "section": "Western Section",
+        "ride_type": "Water Ride",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 46,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.454911583,
+          44.799217934
+        ]
+      },
+      "properties": {
+        "name": "The Wave",
+        "ride_id": 100040,
+        "section": "Northern Section",
+        "ride_type": "Water Ride",
+        "uses_fastlane": "Yes",
+        "min_alone_height": 46,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.454668418,
+          44.79841716
+        ]
+      },
+      "properties": {
+        "name": "Midway Stage",
+        "ride_id": 100051,
+        "section": "Southern Section",
+        "ride_type": "Stage/Theatre",
+        "uses_fastlane": "No",
+        "min_alone_height": 0,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.456585069,
+          44.798466363
+        ]
+      },
+      "properties": {
+        "name": "Galaxy Theatre",
+        "ride_id": 100052,
+        "section": "Southern Section",
+        "ride_type": "Stage/Theatre",
+        "uses_fastlane": "No",
+        "min_alone_height": 0,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.456946514,
+          44.798679536
+        ]
+      },
+      "properties": {
+        "name": "Gazebo Stage",
+        "ride_id": 100053,
+        "section": "Southern Section",
+        "ride_type": "Stage/Theatre",
+        "uses_fastlane": "No",
+        "min_alone_height": 0,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.460062567,
+          44.798940142
+        ]
+      },
+      "properties": {
+        "name": "Loon Landing Stage",
+        "ride_id": 100054,
+        "section": "Soak City",
+        "ride_type": "Stage/Theatre",
+        "uses_fastlane": "No",
+        "min_alone_height": 0,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.456618462,
+          44.80014723
+        ]
+      },
+      "properties": {
+        "name": "PEANUTS Showplace",
+        "ride_id": 100055,
+        "section": "Northern Section",
+        "ride_type": "Stage/Theatre",
+        "uses_fastlane": "No",
+        "min_alone_height": 0,
+        "min_accomp_height": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.455062084,
+          44.799576116
+        ]
+      },
+      "properties": {
+        "name": "Superior Stage",
+        "ride_id": 100056,
+        "section": "Northern Section",
+        "ride_type": "Stage/Theatre",
+        "uses_fastlane": "No",
+        "min_alone_height": 0,
+        "min_accomp_height": 0
+      }
+    }
+  ]
+}

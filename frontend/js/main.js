@@ -9,6 +9,8 @@
 var map;
 let ridesLayer;
 let diningLayer;
+let serviceLayer;
+let retailGamingLayer;
 
 window.onload = function(e) {
 
@@ -56,19 +58,18 @@ function addStaticLayers() {
   fetch('./geojson/sections.geojson')
     .then(response => response.json())
     .then(data => {
-      sectionsLayer = L.geoJSON(data, {
+      L.geoJSON(data, {
         style: sectionStyle,
         pane: 'sections'
       }).addTo(map);
     })
     .catch(err => console.error('Error loading GeoJSON:', err));
 
-  let sidewalkLayer;
   //Sidewalk GeoJSON
   fetch('./geojson/sidewalk.geojson')
     .then(response => response.json())
     .then(data => {
-      sidewalkLayer =L.geoJSON(data, {
+      L.geoJSON(data, {
         style: sidewalkStyle,
         pane: 'sidewalk'
       }).addTo(map);
@@ -79,7 +80,7 @@ function addStaticLayers() {
   fetch('./geojson/retail_game.geojson')
     .then(response => response.json())
     .then(data => {
-      retailGamingLayer = L.geoJSON(data, {
+      L.geoJSON(data, {
         pointToLayer: retailPointToLayer,
         pane: 'mainLayers',
         onEachFeature: (feature, layer) => {
@@ -87,8 +88,7 @@ function addStaticLayers() {
           let popupContent = `${feature.properties.name }`;
           layer.bindPopup(popupContent);
         },
-      });
-      retailGamingLayer.addTo(map);
+      }).addTo(map);
     })
     .catch(err => console.error('Error loading GeoJSON:', err));
 
@@ -127,6 +127,7 @@ async function loadRides() {
   } catch (err) {
     console.error('Failed to load rides:', err);
   }
+  console.log(ridesLayer)
 }
 
 async function loadDining() {
@@ -134,7 +135,6 @@ async function loadDining() {
     const res = await fetch('https://geog777-proj2-backend.onrender.com/api/dining');
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
     const data = await res.json();
-    console.log(data);
     diningLayer = L.geoJSON(data, {
       pointToLayer: diningPointToLayer,
       pane: 'mainLayers',
@@ -142,7 +142,7 @@ async function loadDining() {
         let popupContent = `${feature.properties.name }`;
         layer.bindPopup(popupContent);
       }
-    })
+    });
     diningLayer.addTo(map);
   } catch (err) {
     console.error('Failed to load rides:', err);
