@@ -18,12 +18,16 @@ function addLocateButton() {
 }
 
 function addSearch() {
-    console.log(diningLayer);
-    console.log(ridesLayer)
+
+    const searchLayerGroup = L.layerGroup();
+
+    searchLayerGroup.addLayer(ridesLayer);
+    searchLayerGroup.addLayer(diningLayer);
 
     const searchControl = new L.Control.Search({
-        layer: ridesLayer,
-        propertyName: 'name'
+        layer: searchLayerGroup,
+        propertyName: 'name',
+        zoom: 19
     });
 
 
