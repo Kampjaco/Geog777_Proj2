@@ -18,7 +18,7 @@ function addLocateButton() {
 }
 
 function addSearch() {
-    const searchLayerGroup = L.layerGroup();
+    console.log(diningLayer)
 
     const searchControl = new L.Control.Search({
         layer: diningLayer,

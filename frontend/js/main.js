@@ -30,15 +30,22 @@ window.onload = function(e) {
   });
 
   addStaticLayers();
+  addDynamicLayers();
+
+  async function addDynamicLayers() {
+    //Add rides GeoJSON layer
+    await loadRides();
+
+    //Adds dining GeoJSON layer
+    await loadDining();
+
+    //Adds different user functionality to map
+    addUserFunctionality();
+  }
  
-  //Add rides GeoJSON layer
-  loadRides();
 
-  //Adds dining GeoJSON layer
-  loadDining();
 
-  //Adds different user functionality to map
-  addUserFunctionality();
+
 }
 
 function addStaticLayers() {
