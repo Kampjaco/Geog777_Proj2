@@ -8,8 +8,6 @@ require('dotenv').config();
 
 const ridesRoutes = require('./routes/rides');
 const diningRoutes = require('./routes/dining');
-const diningWaitRoutes = require('./routes/test_route')
-
 const PORT = process.env.PORT || 3000;
 
 //Allows for backend calls from frontend URL
@@ -23,7 +21,6 @@ app.use(express.static(path.join(__dirname, '../frontend')));
 app.use(express.json());
 app.use('/api/rides', ridesRoutes);
 app.use('/api/dining', diningRoutes);
-app.use('/api/diningWait', diningWaitRoutes)
 
 
 app.listen(PORT, () => {
