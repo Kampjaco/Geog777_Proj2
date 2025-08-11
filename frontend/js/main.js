@@ -107,7 +107,7 @@ function addDynamicLayers() {
   let ridesLayer;
   async function loadRides() {
     try {
-      const res = await fetch('/api/rides');
+      const res = await fetch('https://geog777-proj2-backend.onrender.com/api/rides');
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
       const data = await res.json();
       console.log(data);
