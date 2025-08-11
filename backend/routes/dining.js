@@ -52,7 +52,7 @@ router.get('/', async (req, res) => {
 
 // POST new wait time for a dining location
 router.post('/:dining_id/wait-time', async (req, res) => {
-  const diningId = parseInt(req.params.dining_id, 6);
+  const diningId = parseInt(req.params.dining_id, 10);
   const { wait_time } = req.body;
 
   console.log(diningId)
