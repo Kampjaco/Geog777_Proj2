@@ -18,11 +18,12 @@ function addLocateButton() {
 }
 
 function addSearch() {
-    console.log(diningLayer)
+    console.log(diningLayer);
+    console.log(ridesLayer)
 
     const searchControl = new L.Control.Search({
-        layer: diningLayer,
-        propertyName: 'NAME'
+        layer: ridesLayer,
+        propertyName: 'name'
     });
 
 

@@ -99,18 +99,20 @@ function addStaticLayers() {
     })
     .catch(err => console.error('Error loading GeoJSON:', err));
 
-  //Retail and Game Locations GeoJSON
+  //Service location GeoJSON
+
   fetch('./geojson/service.geojson')
     .then(response => response.json())
     .then(data => {
-      L.geoJSON(data, {
+      serviceLayer = L.geoJSON(data, {
         pointToLayer: servicePointToLayer,
         pane: 'mainLayers',
         onEachFeature: (feature, layer) => {
           let popupContent = `${feature.properties.type }`;
           layer.bindPopup(popupContent);
         }
-      }).addTo(map);
+      })
+      serviceLayer.addTo(map);
     })
     .catch(err => console.error('Error loading GeoJSON:', err));
 
