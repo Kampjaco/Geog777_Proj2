@@ -53,4 +53,32 @@ router.get('/', async (req, res) => {
   }
 });
 
+//Route to add wait times to rides
+router.post('/wait_time', async (req, res) => {
+
+  const { rideId, waitTime } = req.body;
+
+  if (!waitTime || isNaN(waitTime) || waitTime < 0) {
+    return res.status(400).json({ error: 'Invalid waitTime' });
+  }
+
+  try {
+    const query = `
+      INSERT INTO wait_times (ride_id, dining_id, wait_time)
+      VALUES ($1, $2, $3)
+      RETURNING *
+    `;
+
+    const values = [rideId, null, waitTime];
+    const { rows } = await pool.query(query, values);
+
+    res.status(201).json({ message: 'Wait time inserted successfully' });
+  } catch (err) {
+    console.log('Incoming data:', req.body);
+    console.error('Error inserting ride wait time:', err);
+    res.status(500).json({ error: 'Failed to insert ride wait time' });
+  }
+
+});
+
 module.exports = router;
