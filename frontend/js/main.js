@@ -127,7 +127,6 @@ async function loadRides() {
   } catch (err) {
     console.error('Failed to load rides:', err);
   }
-  console.log(ridesLayer)
 }
 
 async function loadDining() {

@@ -15,18 +15,17 @@ function addUserFunctionality() {
 
 function addLocateButton() {
     L.control.locate().addTo(map);
-    console.log('hi')
-    return
 }
 
 function addSearch() {
-    const searchLayerGroup = L.layerGroup()
-    searchLayerGroup.addLayer(diningLayer)
+    const searchLayerGroup = L.layerGroup();
 
     const searchControl = new L.Control.Search({
         layer: diningLayer,
-        propertyName: 'Name'
+        propertyName: 'NAME'
     });
+
+
 
     map.addControl(searchControl);
 }
