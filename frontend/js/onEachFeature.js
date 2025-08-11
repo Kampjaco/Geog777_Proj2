@@ -49,10 +49,10 @@ function diningOnEachFeature(feature, layer) {
             console.log(dining_id)
             console.log(typeof(dining_id))
             console.log(waitTime)
-            fetch(`https://geog777-proj2-backend.onrender.com/api/dining/:${dining_id}/wait-time`, {
+            fetch(`https://geog777-proj2-backend.onrender.com/api/dining/wait_time`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ wait_time: waitTime }),
+                body: JSON.stringify({ diningID: dining_id, waitTime: waitTime }),
             })
             .then(res => {
                 if (!res.ok) throw new Error('Failed to update wait time.');

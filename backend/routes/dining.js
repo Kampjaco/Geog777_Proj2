@@ -51,25 +51,25 @@ router.get('/', async (req, res) => {
 });
 
 // POST new wait time for a dining location
-router.post('/:dining_id/wait-time', async (req, res) => {
-  const { wait_time } = req.body;
+router.post('/wait-time', async (req, res) => {
+  const { diningId, waitTime} = req.body;
 
   console.log(diningId)
-  console.log(wait_time)
+  console.log(waitTime)
   
 
-  if (!wait_time || isNaN(wait_time) || wait_time < 0) {
-    return res.status(400).json({ error: 'Invalid wait_time' });
+  if (!waitTime || isNaN(waitTime) || waitTime < 0) {
+    return res.status(400).json({ error: 'Invalid waitTime' });
   }
 
   try {
     const query = `
-      INSERT INTO wait_times (ride_id, dining_id, wait_time, created_at)
+      INSERT INTO waitTimes (ride_id, dining_id, waitTime, created_at)
       VALUES (NULL, $1, $2, NOW())
       RETURNING *;
     `;
 
-    const { rows } = await pool.query(query, [diningId, wait_time]);
+    const { rows } = await pool.query(query, [diningId, waitTime]);
     res.status(201).json(rows[0]);
   } catch (err) {
     console.error('Error inserting dining wait time:', err);
