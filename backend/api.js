@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 
 //Allows for backend calls from frontend URL
 app.use(cors({
-  origin: 'https://geog777-proj2-frontend.onrender.com'  // restrict to your frontend domain
+  origin: 'https://geog777-proj2-frontend.onrender.com'
 }));
 
 ///Middleware
