@@ -129,10 +129,7 @@ async function loadRides() {
     ridesLayer = L.geoJSON(data, {
       pointToLayer: ridesPointToLayer,
       pane: 'mainLayers',
-      onEachFeature: (feature, layer) => {
-        let popupContent = `${feature.properties.name }`;
-        layer.bindPopup(popupContent);
-      }
+      onEachFeature: ridesOnEachFeature
     });
     ridesLayer.addTo(map);
   } catch (err) {
