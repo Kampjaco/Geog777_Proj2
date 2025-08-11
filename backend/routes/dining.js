@@ -57,6 +57,7 @@ router.post('/:dining_id/wait-time', async (req, res) => {
 
   console.log(diningId)
   console.log(wait_time)
+  
 
   if (!wait_time || isNaN(wait_time) || wait_time < 0) {
     return res.status(400).json({ error: 'Invalid wait_time' });
@@ -75,11 +76,6 @@ router.post('/:dining_id/wait-time', async (req, res) => {
     console.error('Error inserting dining wait time:', err);
     res.status(500).json({ error: 'Failed to insert dining wait time' });
   }
-});
-
-router.post('/test', (req, res) => {
-  console.log('Test POST route hit', req.body);
-  res.json({ message: 'Test POST received' });
 });
 
 module.exports = router;

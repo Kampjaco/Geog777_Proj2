@@ -47,6 +47,7 @@ function diningOnEachFeature(feature, layer) {
             }
 
             console.log(dining_id)
+            console.log(typeof(diningId))
             console.log(waitTime)
             fetch(`https://geog777-proj2-backend.onrender.com/api/dining/${dining_id}/wait-time`, {
                 method: 'POST',
@@ -66,13 +67,4 @@ function diningOnEachFeature(feature, layer) {
             });
         });
     });
-
-    fetch('https://geog777-proj2-backend.onrender.com/api/dining/test', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ test: 'data' }),
-        })
-        .then(res => res.json())
-        .then(console.log)
-        .catch(console.error);
 }
