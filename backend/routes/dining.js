@@ -51,9 +51,10 @@ router.get('/', async (req, res) => {
 });
 
 // POST new wait time for a dining location
-router.post('/wait_time', async (req, res) => {
-  console.log(req);
-  const { diningId, waitTime } = req.body;
+router.post('/:dining_id/wait_time', async (req, res) => {
+  
+  const diningId = Number(req.params.dining_id); 
+  const { wait_time } = req.body;
 
   console.log(diningId);
   console.log(waitTime);
@@ -74,19 +75,13 @@ router.post('/wait_time', async (req, res) => {
   const { rows } = await pool.query(query, values);
 
   res.status(201).json({ message: 'Wait time inserted successfully' });
-} catch (err) {
-  console.log('Incoming data:', req.body);
-  console.error('Error inserting dining wait time:', err);
-  res.status(500).json({ error: 'Failed to insert dining wait time' });
-}
+  } catch (err) {
+    console.log('Incoming data:', req.body);
+    console.error('Error inserting dining wait time:', err);
+    res.status(500).json({ error: 'Failed to insert dining wait time' });
+  }
 
 });
 
 
-
-router.post('/wait_time', (req, res) => {
-  console.log('Headers:', req.headers);
-  console.log('Raw Body:', req.body);
-  res.json({ message: 'Got it' });
-});
 module.exports = router;
