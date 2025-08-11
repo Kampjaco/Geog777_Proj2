@@ -52,7 +52,7 @@ function diningOnEachFeature(feature, layer) {
             fetch(`https://geog777-proj2-backend.onrender.com/api/dining/wait_time`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ diningID: dining_id, waitTime: waitTime }),
+                body: JSON.stringify({ diningID: 200005, waitTime: 12 }),
             })
             .then(res => {
                 console.log(res)
