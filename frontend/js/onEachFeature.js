@@ -107,8 +107,8 @@ function ridesOnEachFeature(feature, layer) {
       <h5 class="mb-2 text-primary fw-bold">${name}</h5>
       <p class="mb-1"><strong>Section:</strong> ${section}</p>
       <p class="mb-1"><strong>Uses Fastlane?:</strong> ${uses_fastlane}</p>
-      <p class="mb-1"><strong>Minimum Height to Ride Alone:</strong> ${min_alone_height} inches</p>
-      <p class="mb-1"><strong>Minimum Height to Ride Accompanied:</strong> ${min_accomp_height} inches</p>
+      <p class="mb-1"><strong>Minimum Height to Ride Alone:</strong> ${min_alone_height}''</p>
+      <p class="mb-1"><strong>Minimum Height to Ride Accompanied:</strong> ${min_accomp_height}''</p>
       <p class="mb-1"><strong>Average Thrill Rating:</strong> 
         ${avg_thrill_rating != null ? `${avg_thrill_rating} / 5` : 'No submitted values'}
       </p>
