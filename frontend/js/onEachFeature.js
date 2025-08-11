@@ -32,37 +32,39 @@ function diningOnEachFeature(feature, layer) {
 
     layer.bindPopup(popupContent);
 
-    // // Handle form submission when popup opens
-    // layer.on('popupopen', () => {
-    //     const form = document.querySelector(`.update-wait-form[data-id="${dining_id}"]`);
-    //     form.addEventListener('submit', async (e) => {
-    //         e.preventDefault();
-    //         const formData = new FormData(form);
-    //         const waitTime = formData.get('current_wait');
+    // Handle form submission when popup opens
+    layer.on('popupopen', () => {
+        const form = document.querySelector(`.update-wait-form[data-id="${dining_id}"]`);
 
-    //         if (!waitTime) {
-    //             alert('Please enter a wait time.');
-    //             return;
-    //         }
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const waitTime = formData.get('current_wait');
 
-    //         console.log(dining_id)
-    //         url =`https://geog777-proj2-backend.onrender.com/api/dining/${dining_id}/wait-time`
-    //         console.log(url)
+            if (!waitTime) {
+                alert('Please enter a wait time.');
+                return;
+            }
 
-    //         const res = await fetch(url, {
-    //             method: 'POST',
-    //             headers: { 'Content-Type': 'application/json' },
-    //             body: JSON.stringify({ wait_time: waitTime })
-    //         });
+            console.log(dining_id)
+            console.log(waitTime)
+            url =`https://geog777-proj2-backend.onrender.com/api/dining/${dining_id}/wait-time`
+            console.log(url)
 
-    //         if (res.ok) {
-    //             layer.closePopup();
-    //             loadDining(); // reload the dining layer from backend
-    //         } else {
-    //             alert('Failed to update wait time.');
-    //         }
-    //     });
-    // });
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ wait_time: waitTime })
+            });
+
+            if (res.ok) {
+                layer.closePopup();
+                loadDining(); // reload the dining layer from backend
+            } else {
+                alert('Failed to update wait time.');
+            }
+        });
+    });
 
     fetch('https://geog777-proj2-backend.onrender.com/api/dining/test', {
         method: 'POST',
