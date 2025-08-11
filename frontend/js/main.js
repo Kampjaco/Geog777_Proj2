@@ -30,6 +30,9 @@ window.onload = function(e) {
   let ridesLayer;
   //Add rides GeoJSON layer
   loadRides();
+
+  let diningLayer;
+  loadDining();
 }
 
 function addStaticLayers() {
@@ -130,7 +133,7 @@ async function loadDining() {
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
     const data = await res.json();
     console.log(data);
-    ridesLayer = L.geoJSON(data, {
+    diningLayer = L.geoJSON(data, {
       pointToLayer: diningPointToLayer,
       pane: 'mainLayers',
       onEachFeature: (feature, layer) => {
