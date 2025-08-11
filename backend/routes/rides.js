@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
       FROM (
         SELECT jsonb_build_object(
           'type', 'Feature',
-          'geometry', ST_AsGeoJSON(r.geom)::jsonb,
+          'geometry', ST_AsGeoJSON(ST_Transform(r.geom, 4326))::jsonb,
           'properties', jsonb_build_object(
             'ride_id', r.id,
             'name', r.name,
