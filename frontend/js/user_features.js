@@ -19,14 +19,14 @@ function addLocateButton() {
 }
 
 function addSearch() {
-    var searchLayer = L.layerGroup().addTo(map);
-    
-    searchLayer.addLayer(ridesLayer);
-    searchLayer.addLayer(diningLayer);
-    console.log('cech')
+    const searchLayerGroup = L.layerGroup()
+    searchLayerGroup.addLayer(ridesLayer);
+    searchLayerGroup.addLayer(diningLayer);
 
-    console.log('chck')
+    const searchControl = new L.Control.Search({
+        layer: searchLayerGroup,
+        propertyName: 'Name'
+    });
 
-    map.addControl(new L.Control.Search({layer: searchLayer}));
-    console.log('chyeck')
+    map.addControl(searchControl);
 }

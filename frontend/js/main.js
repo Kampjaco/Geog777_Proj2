@@ -7,10 +7,8 @@
 
 //Global variables
 var map;
-var ridesLayer;
-var serviceLocationLayer;
-var retailGameLayer;
-var diningLayer;
+let ridesLayer;
+let diningLayer;
 
 window.onload = function(e) {
 
@@ -31,11 +29,10 @@ window.onload = function(e) {
 
   addStaticLayers();
  
-  let ridesLayer;
   //Add rides GeoJSON layer
   loadRides();
 
-  let diningLayer;
+  //Adds dining GeoJSON layer
   loadDining();
 
   //Adds different user functionality to map
@@ -51,10 +48,10 @@ function addStaticLayers() {
   
   map.getPane('sections').style.zIndex = 400;
   map.getPane('sidewalk').style.zIndex = 450;
-  map.getPane('mainLayers').style.zIndex = 650
+  map.getPane('mainLayers').style.zIndex = 650;
   
 
-  let sectionsLayer;
+
   //Sections GeoJSON
   fetch('./geojson/sections.geojson')
     .then(response => response.json())
@@ -78,12 +75,11 @@ function addStaticLayers() {
     })
     .catch(err => console.error('Error loading GeoJSON:', err));
   
-
   //Retail and Game Locations GeoJSON
   fetch('./geojson/retail_game.geojson')
     .then(response => response.json())
     .then(data => {
-      retailGameLayer = L.geoJSON(data, {
+      retailGamingLayer = L.geoJSON(data, {
         pointToLayer: retailPointToLayer,
         pane: 'mainLayers',
         onEachFeature: (feature, layer) => {
@@ -91,7 +87,8 @@ function addStaticLayers() {
           let popupContent = `${feature.properties.name }`;
           layer.bindPopup(popupContent);
         },
-      }).addTo(map);
+      });
+      retailGamingLayer.addTo(map);
     })
     .catch(err => console.error('Error loading GeoJSON:', err));
 
@@ -99,7 +96,7 @@ function addStaticLayers() {
   fetch('./geojson/service.geojson')
     .then(response => response.json())
     .then(data => {
-      serviceLocationLayer = L.geoJSON(data, {
+      L.geoJSON(data, {
         pointToLayer: servicePointToLayer,
         pane: 'mainLayers',
         onEachFeature: (feature, layer) => {
@@ -118,7 +115,6 @@ async function loadRides() {
     const res = await fetch('https://geog777-proj2-backend.onrender.com/api/rides');
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
     const data = await res.json();
-    console.log(data);
     ridesLayer = L.geoJSON(data, {
       pointToLayer: ridesPointToLayer,
       pane: 'mainLayers',
@@ -126,7 +122,8 @@ async function loadRides() {
         let popupContent = `${feature.properties.name }`;
         layer.bindPopup(popupContent);
       }
-    }).addTo(map);
+    });
+    ridesLayer.addTo(map);
   } catch (err) {
     console.error('Failed to load rides:', err);
   }
@@ -145,7 +142,8 @@ async function loadDining() {
         let popupContent = `${feature.properties.name }`;
         layer.bindPopup(popupContent);
       }
-    }).addTo(map);
+    })
+    diningLayer.addTo(map);
   } catch (err) {
     console.error('Failed to load rides:', err);
   }
