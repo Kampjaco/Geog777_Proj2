@@ -112,7 +112,7 @@ function addDynamicLayers() {
       const data = await res.json();
       console.log(data);
       ridesLayer = L.geoJSON(data, {
-        pointToLayer: ridesPointToLayer(),
+        pointToLayer: ridesPointToLayer,
         pane: 'mainLayers',
         onEachFeature: (feature, layer) => {
           let popupContent = `${feature.properties.name }`;
