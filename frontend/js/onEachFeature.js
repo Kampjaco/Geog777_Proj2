@@ -55,6 +55,7 @@ function diningOnEachFeature(feature, layer) {
                 body: JSON.stringify({ diningID: dining_id, waitTime: waitTime }),
             })
             .then(res => {
+                console.log(res)
                 if (!res.ok) throw new Error('Failed to update wait time.');
                 return res.json();
             })
