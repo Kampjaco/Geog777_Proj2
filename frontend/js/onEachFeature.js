@@ -45,7 +45,7 @@ function diningOnEachFeature(feature, layer) {
                 return;
             }
 
-            const res = await fetch(`https://your-backend-url/api/dining/${dining_id}/wait-time`, {
+            const res = await fetch(`https://geog777-proj2-backend.onrender.com/api/dining/${dining_id}/wait-time`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ dining_id: dining_id, wait_time: waitTime })
