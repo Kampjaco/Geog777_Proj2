@@ -48,21 +48,22 @@ function diningOnEachFeature(feature, layer) {
 
             console.log(dining_id)
             console.log(waitTime)
-            url =`https://geog777-proj2-backend.onrender.com/api/dining/${dining_id}/wait-time`
-            console.log(url)
-
-            const res = await fetch(url, {
+            fetch(`https://geog777-proj2-backend.onrender.com/api/dining/${dining_id}/wait-time`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ wait_time: waitTime })
-            });
-
-            if (res.ok) {
+                body: JSON.stringify({ wait_time: waitTime }),
+            })
+            .then(res => {
+                if (!res.ok) throw new Error('Failed to update wait time.');
+                return res.json();
+            })
+            .then(() => {
                 layer.closePopup();
                 loadDining(); // reload the dining layer from backend
-            } else {
-                alert('Failed to update wait time.');
-            }
+            })
+            .catch(err => {
+                alert(err.message);
+            });
         });
     });
 
