@@ -51,7 +51,7 @@ router.get('/', async (req, res) => {
 });
 
 // POST new wait time for a dining location
-router.post('/wait-time', async (req, res) => {
+router.post('/wait_time', async (req, res) => {
   const { diningId, waitTime} = req.body;
 
   console.log(diningId)
