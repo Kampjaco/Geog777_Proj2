@@ -7,6 +7,10 @@
 
 //Global variables
 var map;
+var ridesLayer;
+var serviceLocationLayer;
+var retailGameLayer;
+var diningLayer;
 
 window.onload = function(e) {
 
@@ -33,6 +37,9 @@ window.onload = function(e) {
 
   let diningLayer;
   loadDining();
+
+  //Adds different user functionality to map
+  addUserFunctionality();
 }
 
 function addStaticLayers() {
@@ -72,7 +79,6 @@ function addStaticLayers() {
     .catch(err => console.error('Error loading GeoJSON:', err));
   
 
-  let retailGameLayer;
   //Retail and Game Locations GeoJSON
   fetch('./geojson/retail_game.geojson')
     .then(response => response.json())
@@ -89,7 +95,6 @@ function addStaticLayers() {
     })
     .catch(err => console.error('Error loading GeoJSON:', err));
 
-  let serviceLocationLayer;
   //Retail and Game Locations GeoJSON
   fetch('./geojson/service.geojson')
     .then(response => response.json())
