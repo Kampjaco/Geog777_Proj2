@@ -52,9 +52,9 @@ router.get('/', async (req, res) => {
 
 
 
-// router.post('/wait_time', (req, res) => {
-//   console.log('Headers:', req.headers);
-//   console.log('Raw Body:', req.body);
-//   res.json({ message: 'Got it' });
-// });
+router.post('/wait_time', (req, res) => {
+  console.log('Headers:', req.headers);
+  console.log('Raw Body:', req.body);
+  res.json({ message: 'Got it' });
+});
 module.exports = router;
