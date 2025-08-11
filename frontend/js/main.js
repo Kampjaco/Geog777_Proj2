@@ -58,64 +58,73 @@ function addStaticLayers() {
   map.getPane('sections').style.zIndex = 400;
   map.getPane('sidewalk').style.zIndex = 450;
   map.getPane('mainLayers').style.zIndex = 650;
-  
 
+  addSections();
+  addSidewalks();
+  addRetail();
+  addService();
 
+  function addSections() {
   //Sections GeoJSON
-  fetch('./geojson/sections.geojson')
-    .then(response => response.json())
-    .then(data => {
-      L.geoJSON(data, {
-        style: sectionStyle,
-        pane: 'sections'
-      }).addTo(map);
-    })
-    .catch(err => console.error('Error loading GeoJSON:', err));
-
-  //Sidewalk GeoJSON
-  fetch('./geojson/sidewalk.geojson')
-    .then(response => response.json())
-    .then(data => {
-      L.geoJSON(data, {
-        style: sidewalkStyle,
-        pane: 'sidewalk'
-      }).addTo(map);
-    })
-    .catch(err => console.error('Error loading GeoJSON:', err));
-  
-  //Retail and Game Locations GeoJSON
-  fetch('./geojson/retail_game.geojson')
-    .then(response => response.json())
-    .then(data => {
-      L.geoJSON(data, {
-        pointToLayer: retailPointToLayer,
-        pane: 'mainLayers',
-        onEachFeature: (feature, layer) => {
-          // Customize popup content as needed
-          let popupContent = `${feature.properties.name }`;
-          layer.bindPopup(popupContent);
-        },
-      }).addTo(map);
-    })
-    .catch(err => console.error('Error loading GeoJSON:', err));
-
-  //Service location GeoJSON
-
-  fetch('./geojson/service.geojson')
-    .then(response => response.json())
-    .then(data => {
-      serviceLayer = L.geoJSON(data, {
-        pointToLayer: servicePointToLayer,
-        pane: 'mainLayers',
-        onEachFeature: (feature, layer) => {
-          let popupContent = `${feature.properties.type }`;
-          layer.bindPopup(popupContent);
-        }
+    fetch('./geojson/sections.geojson')
+      .then(response => response.json())
+      .then(data => {
+        L.geoJSON(data, {
+          style: sectionStyle,
+          pane: 'sections'
+        }).addTo(map);
       })
-      serviceLayer.addTo(map);
-    })
-    .catch(err => console.error('Error loading GeoJSON:', err));
+      .catch(err => console.error('Error loading GeoJSON:', err));
+  }
 
+  function addSidewalks() {
+    //Sidewalk GeoJSON
+    fetch('./geojson/sidewalk.geojson')
+      .then(response => response.json())
+      .then(data => {
+        L.geoJSON(data, {
+          style: sidewalkStyle,
+          pane: 'sidewalk'
+        }).addTo(map);
+      })
+      .catch(err => console.error('Error loading GeoJSON:', err));
+  }
+
+  function addRetail() {
+  //Retail and Game Locations GeoJSON
+    fetch('./geojson/retail_game.geojson')
+      .then(response => response.json())
+      .then(data => {
+        L.geoJSON(data, {
+          pointToLayer: retailPointToLayer,
+          pane: 'mainLayers',
+          onEachFeature: (feature, layer) => {
+            // Customize popup content as needed
+            let popupContent = `${feature.properties.name }`;
+            layer.bindPopup(popupContent);
+          },
+        }).addTo(map);
+      })
+      .catch(err => console.error('Error loading GeoJSON:', err));
+  }
+
+  function addService() {
+    //Service location GeoJSON
+    fetch('./geojson/service.geojson')
+      .then(response => response.json())
+      .then(data => {
+        serviceLayer = L.geoJSON(data, {
+          pointToLayer: servicePointToLayer,
+          pane: 'mainLayers',
+          onEachFeature: (feature, layer) => {
+            let popupContent = `${feature.properties.type }`;
+            layer.bindPopup(popupContent);
+          }
+        })
+        serviceLayer.addTo(map);
+      })
+      .catch(err => console.error('Error loading GeoJSON:', err));
+  }
 }
 
 

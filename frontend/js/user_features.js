@@ -11,9 +11,12 @@ function addUserFunctionality() {
     addLocateButton();
     
     addSearch();
+
+    addFilter();
 }
 
 function addLocateButton() {
+
     L.control.locate().addTo(map);
 }
 
@@ -42,8 +45,6 @@ function addSearch() {
             });
         }
     });
-
-
-
     map.addControl(searchControl);
 }
+
