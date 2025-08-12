@@ -109,12 +109,13 @@ function diningOnEachFeature(feature, layer) {
 }
 
 function ridesOnEachFeature(feature, layer) {
-    const { name, section, ride_id, uses_fastlane, min_alone_height, min_accomp_height, avg_thrill_rating, avg_wait_time } = feature.properties;
+    const { name, section, ride_id, uses_fastlane, ride_type, min_alone_height, min_accomp_height, avg_thrill_rating, avg_wait_time } = feature.properties;
 
     const popupContent = `
     <div class="p-2" style="min-width:200px;">
       <h5 class="mb-2 text-primary fw-bold">${name}</h5>
       <p class="mb-1"><strong>Section:</strong> ${section}</p>
+      <p class="mb-1"><strong>Uses Fastlane?:</strong> ${ride_type}</p>
       <p class="mb-1"><strong>Uses Fastlane?:</strong> ${uses_fastlane}</p>
       <p class="mb-1"><strong>Minimum Height to Ride Alone:</strong> ${min_alone_height}''</p>
       <p class="mb-1"><strong>Minimum Height to Ride Accompanied:</strong> ${min_accomp_height}''</p>
@@ -154,7 +155,7 @@ function ridesOnEachFeature(feature, layer) {
       </form>
     </div>
     `;
-    
+
     layer.bindPopup(popupContent, {
         autoPan: true,
         autoPanPadding: L.point(80, 80)

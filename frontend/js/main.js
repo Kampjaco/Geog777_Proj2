@@ -45,9 +45,6 @@ window.onload = function(e) {
     //Adds different user functionality to map
     addUserFunctionality();
   }
- 
-
-
 
 }
 
