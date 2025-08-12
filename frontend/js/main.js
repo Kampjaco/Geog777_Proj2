@@ -19,13 +19,16 @@ window.onload = function(e) {
     [44.795445728284136, -93.46552743395252],
     [44.80152956759408, -93.4476906867284]
   )
+
+  //Padded bounding box to support popups
+  const paddedBounds = bounds.pad(0.05);
   // Initialize map
   map = L.map('map', {
     center: [44.79873578568766, -93.45361939995553],
     zoom: 18,
     minZoom: 18,
     maxZoom: 20,
-    maxBounds: bounds,
+    maxBounds: paddedBounds,
     maxBoundsViscosity: 1.0
   });
 

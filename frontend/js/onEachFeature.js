@@ -16,7 +16,10 @@ function serviceOnEachFeature(feature, layer) {
     </div>
     `;
 
-    layer.bindPopup(popupContent);
+    layer.bindPopup(popupContent, {
+        autoPan: true,
+        autoPanPadding: L.point(80, 80)
+    });
 }
 
 function retailOnEachFeature(feature, layer) {
@@ -31,7 +34,10 @@ function retailOnEachFeature(feature, layer) {
     </div>
     `;
 
-    layer.bindPopup(popupContent);    
+    layer.bindPopup(popupContent, {
+        autoPan: true,
+        autoPanPadding: L.point(80, 80)
+    });    
 }
 
 function diningOnEachFeature(feature, layer) {
@@ -59,7 +65,10 @@ function diningOnEachFeature(feature, layer) {
     </div>
     `;
 
-    layer.bindPopup(popupContent);
+    layer.bindPopup(popupContent, {
+        autoPan: true,
+        autoPanPadding: L.point(80, 80)
+    });
 
     // Handle form submission when popup opens
     layer.on('popupopen', () => {
@@ -145,10 +154,10 @@ function ridesOnEachFeature(feature, layer) {
       </form>
     </div>
     `;
-
+    
     layer.bindPopup(popupContent, {
         autoPan: true,
-        autoPanPadding: L.point(50,50)
+        autoPanPadding: L.point(80, 80)
     });
 
     // Handle form submissions when popup opens
