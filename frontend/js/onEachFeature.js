@@ -146,7 +146,10 @@ function ridesOnEachFeature(feature, layer) {
     </div>
     `;
 
-    layer.bindPopup(popupContent);
+    layer.bindPopup(popupContent, {
+        autoPan: true,
+        autoPanPadding: L.point(50,50)
+    });
 
     // Handle form submissions when popup opens
     layer.on('popupopen', () => {
