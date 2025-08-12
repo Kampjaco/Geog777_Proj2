@@ -21,7 +21,7 @@ window.onload = function(e) {
   )
 
   //Padded bounding box to support popups
-  const paddedBounds = bounds.pad(0.05);
+  const paddedBounds = bounds.pad(0.25);
   // Initialize map
   map = L.map('map', {
     center: [44.79873578568766, -93.45361939995553],
@@ -29,7 +29,7 @@ window.onload = function(e) {
     minZoom: 18,
     maxZoom: 20,
     maxBounds: paddedBounds,
-    maxBoundsViscosity: 1.0
+    maxBoundsViscosity: 0.9
   });
 
   addStaticLayers();
