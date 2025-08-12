@@ -81,4 +81,32 @@ router.post('/wait_time', async (req, res) => {
 
 });
 
+//Route to add wait times to rides
+router.post('/thrill_rating', async (req, res) => {
+
+  const { rideId, thrillRating } = req.body;
+
+  if (!thrillRating || isNaN(thrillRating) || thrillRating < 0 || thrillRating > 5) {
+    return res.status(400).json({ error: 'Invalid waitTime' });
+  }
+
+  try {
+    const query = `
+      INSERT INTO thrill_ratings (ride_id, thrill_lvl)
+      VALUES ($1, $2)
+      RETURNING *
+    `;
+
+    const values = [rideId, thrillRating];
+    const { rows } = await pool.query(query, values);
+
+    res.status(201).json({ message: 'Thrill rating inserted successfully' });
+  } catch (err) {
+    console.log('Incoming data:', req.body);
+    console.error('Error inserting thrill rating:', err);
+    res.status(500).json({ error: 'Failed to insert thrill rating' });
+  }
+
+});
+
 module.exports = router;
