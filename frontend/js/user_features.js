@@ -21,11 +21,6 @@ function addLocateButton() {
 
 function addSearch() {
 
-    //Updates popups
-    if(searchControl) {
-        map.remove(searchControl)
-    }
-
     let searchLayerGroup = L.layerGroup();
 
     searchLayerGroup.addLayer(ridesLayer);
