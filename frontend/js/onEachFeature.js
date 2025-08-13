@@ -100,7 +100,6 @@ function diningOnEachFeature(feature, layer) {
             .then(() => {
                 layer.closePopup();
                 loadDining(); // reload the dining layer from backend
-                addSearch();
             })
             .catch(err => {
                 alert(err.message);
@@ -188,7 +187,6 @@ function ridesOnEachFeature(feature, layer) {
             .then(() => {
                 layer.closePopup();
                 loadRides(); // reload rides layer
-                addSearch();
             })
             .catch(err => {
                 alert(err.message);
@@ -219,7 +217,6 @@ function ridesOnEachFeature(feature, layer) {
             .then(() => {
                 layer.closePopup();
                 loadRides(); // reload rides layer
-                addSearch();
             })
             .catch(err => {
                 alert(err.message);
