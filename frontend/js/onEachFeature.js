@@ -100,6 +100,7 @@ function diningOnEachFeature(feature, layer) {
             .then(() => {
                 layer.closePopup();
                 loadDining(); // reload the dining layer from backend
+                addSearch();
             })
             .catch(err => {
                 alert(err.message);
@@ -162,7 +163,7 @@ function ridesOnEachFeature(feature, layer) {
     });
 
     // Handle form submissions when popup opens
-    layer.on('popupopen', () => {
+    layer.on('popupopen', async () => {
         // Thrill Rating form
         const thrillForm = document.querySelector(`.update-thrill-form[data-id="${ride_id}"]`);
         thrillForm.addEventListener('submit', async (e) => {
@@ -187,6 +188,7 @@ function ridesOnEachFeature(feature, layer) {
             .then(() => {
                 layer.closePopup();
                 loadRides(); // reload rides layer
+                addSearch();
             })
             .catch(err => {
                 alert(err.message);
@@ -217,6 +219,7 @@ function ridesOnEachFeature(feature, layer) {
             .then(() => {
                 layer.closePopup();
                 loadRides(); // reload rides layer
+                addSearch();
             })
             .catch(err => {
                 alert(err.message);
