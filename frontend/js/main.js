@@ -44,6 +44,9 @@ window.onload = function(e) {
 
     //Adds different user functionality to map
     addUserFunctionality();
+
+    //Adds legend
+    addLegend();
   }
 
 }
@@ -151,5 +154,30 @@ async function loadDining() {
   } catch (err) {
     console.error('Failed to load rides:', err);
   }
+}
+
+function addLegend() {
+  const legend = L.control({ position: 'bottomleft' });
+
+legend.onAdd = function (map) {
+  const div = L.DomUtil.create('div', 'info legend');
+  const labels = [
+    '<i style="background: #ff0000"></i> Rides',
+    '<i style="background: #ffff00"></i> Dining Locations',
+    '<i style="background: #800080"></i> Retail & Gaming Locations',
+    '<i style="background: lightblue"></i> Service Locations',
+
+  ];
+
+  div.innerHTML = labels.join('<br>');
+  div.style.background = 'white';
+  div.style.padding = '6px 8px';
+  div.style.borderRadius = '5px';
+  div.style.boxShadow = '0 0 15px rgba(0,0,0,0.2)';
+  div.style.fontSize = '14px';
+  return div;
+};
+
+legend.addTo(map);
 }
 

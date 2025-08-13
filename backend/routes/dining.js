@@ -54,11 +54,7 @@ router.get('/', async (req, res) => {
 router.post('/wait_time', async (req, res) => {
   console.log(req);
   const { diningId, waitTime } = req.body;
-
-  console.log(diningId);
-  console.log(waitTime);
   
-
   if (!waitTime || isNaN(waitTime) || waitTime < 0) {
     return res.status(400).json({ error: 'Invalid waitTime' });
   }

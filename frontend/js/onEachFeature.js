@@ -115,7 +115,7 @@ function ridesOnEachFeature(feature, layer) {
     <div class="p-2" style="min-width:200px;">
       <h5 class="mb-2 text-primary fw-bold">${name}</h5>
       <p class="mb-1"><strong>Section:</strong> ${section}</p>
-      <p class="mb-1"><strong>Uses Fastlane?:</strong> ${ride_type}</p>
+      <p class="mb-1"><strong>Ride Type:</strong> ${ride_type}</p>
       <p class="mb-1"><strong>Uses Fastlane?:</strong> ${uses_fastlane}</p>
       <p class="mb-1"><strong>Minimum Height to Ride Alone:</strong> ${min_alone_height}''</p>
       <p class="mb-1"><strong>Minimum Height to Ride Accompanied:</strong> ${min_accomp_height}''</p>
